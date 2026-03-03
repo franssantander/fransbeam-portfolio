@@ -1,0 +1,6 @@
+[
+  { "name": "react", "hasVariant": true },
+  { "name": "nextjs2", "hasVariant": true },
+  { "name": "typescript", "hasVariant": true },
+  { "name": "laravel", "hasVariant": true }
+]

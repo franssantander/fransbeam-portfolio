@@ -1,37 +1,78 @@
 "use client";
+import { useState, useEffect } from "react"; // Added for hydration fix
 import Image from "next/image";
 import Logo from "../assets/frans-dark-logo.svg";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { More01Icon, Moon02Icon } from "@hugeicons/core-free-icons";
+import {
+  More01Icon,
+  Moon02Icon,
+  Sun01FreeIcons,
+} from "@hugeicons/core-free-icons";
 import { Button } from "./ui";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
-  return (
-    <div className="w-full flex items-center justify-between p-4 max-w-7xl mx-auto">
-      <Image
-        src={Logo}
-        alt="Frans Logo"
-        width={43}
-        height={43}
-        loading="eager"
-      />
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-      <ul className="flex items-center gap-7 text-base lg:flex hidden">
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Designs</li>
-        <li>Experiences</li>
-        <li>Skills</li>
-        <li>Blog</li>
-      </ul>
-      <div>
-        <Button className="lg:hidden" size="icon-lg" variant="outline">
-          <HugeiconsIcon size={34} icon={More01Icon} />
-        </Button>
-        <Button className="hidden md:flex" size="icon-lg" variant="outline">
-          <HugeiconsIcon size={34} icon={Moon02Icon} />
-        </Button>
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="h-[75px] w-full" />;
+  }
+
+  return (
+    <nav className="bg-white dark:bg-black sticky top-0 z-50">
+      <div className="w-full flex items-center justify-between p-4 max-w-7xl mx-auto">
+        <Image
+          src={Logo}
+          alt="Frans Logo"
+          width={43}
+          height={43}
+          loading="eager"
+        />
+
+        <ul className="flex items-center gap-7 text-sm font-medium lg:flex hidden">
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Home
+          </li>
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Projects
+          </li>
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Designs
+          </li>
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Experiences
+          </li>
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Skills
+          </li>
+          <li className="hover:text-neutral-500 cursor-pointer transition-colors">
+            Blog
+          </li>
+        </ul>
+
+        <div className="flex items-center gap-2">
+          <Button
+            className="hidden md:flex"
+            size="icon"
+            variant="outline"
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          >
+            <HugeiconsIcon
+              size={24}
+              icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
+            />
+          </Button>
+
+          <Button className="lg:hidden" size="icon" variant="outline">
+            <HugeiconsIcon size={24} icon={More01Icon} />
+          </Button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
