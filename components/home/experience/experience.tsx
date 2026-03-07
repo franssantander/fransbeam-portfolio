@@ -1,4 +1,4 @@
-import React from "react";
+import ExperienceData from "@/data/EXPERIENCE_DATA.json";
 import ExperienceCard from "../uiux/experience-card";
 
 export default function Experience() {
@@ -8,8 +8,10 @@ export default function Experience() {
         <h1 className="text-neutral-500">2 Years of</h1>
         <h1>Experience</h1>
       </div>
-      <div className="grid grid-cols-1 gap-7">
-        <ExperienceCard />
+      <div className="grid grid-cols-1 gap-16">
+        {ExperienceData.map((experience, index) => (
+          <ExperienceCard experience={experience} key={index} />
+        ))}
       </div>
     </section>
   );
