@@ -1,6 +1,7 @@
 import StickyLeftContent from "@/components/home/sticky-left-content";
 import Hero from "@/components/home/hero";
-import ProjectCard from "@/components/home/project-card";
+import Project from "@/components/home/projects/project";
+import Uiux from "@/components/home/uiux/ui-ux";
 
 export default function HomePage() {
   return (
@@ -10,13 +11,8 @@ export default function HomePage() {
 
         <div className="flex flex-col space-y-12 w-full lg:w-2/3">
           <Hero />
-          <section className="py-20">
-            <div className="font-black text-5xl uppercase space-y-2 mb-10 lg:text-7xl">
-              <h1 className="text-neutral-500">Recent</h1>
-              <h1>Project</h1>
-            </div>
-            <ProjectCard />
-          </section>
+          <Project />
+          <Uiux />
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50">
+    <nav className="sticky top-0 z-50 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
       <div className="w-full flex items-center justify-between p-4 max-w-7xl mx-auto">
         <Image
           src={Logo}

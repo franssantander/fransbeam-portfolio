@@ -1,0 +1,44 @@
+[
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "Hyperview",
+    "category": "figma",
+    "description": "",
+    "link": ""
+  },
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "Local Po",
+    "category": "figma",
+    "description": "",
+    "link": ""
+  },
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "RJ Avancena (POS)",
+    "category": "figma",
+    "description": "",
+    "link": ""
+  },
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "Frogman Merchant",
+    "category": "figma",
+    "description": "",
+    "link": ""
+  },
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "Basic Clothing E-Commerce",
+    "category": "figma",
+    "description": "Figma",
+    "link": ""
+  },
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "DrumPad App",
+    "category": "figma",
+    "description": "Figma",
+    "link": ""
+  }
+]
