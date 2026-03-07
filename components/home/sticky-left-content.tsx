@@ -1,13 +1,11 @@
 "use client";
 
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import francisImage from "@/assets/francis-img.jpg";
 import StackIcon from "tech-stack-icons";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import TECH_STACK from "@/data/TECH_STACK.json";
 import Image from "next/image";
-import { Button } from "../ui";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   FileDownloadFreeIcons,
@@ -28,7 +26,7 @@ export default function StickyLeftContent() {
   const currentVariant = mounted && resolvedTheme === "dark" ? "dark" : "light";
 
   return (
-    <div className="w-full lg:w-1/3 lg:sticky lg:top-20 flex flex-col items-center justify-center gap-4 text-center h-fit">
+    <div className="w-full lg:w-1/3 lg:sticky lg:top-1/2 lg:-translate-y-1/2 flex flex-col items-center justify-center gap-4 text-center h-fit">
       <div className="relative h-40 w-40 lg:h-80 lg:w-80 overflow-hidden rounded-full ">
         <Image
           src={francisImage}

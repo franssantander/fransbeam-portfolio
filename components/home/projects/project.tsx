@@ -3,7 +3,7 @@ import ProjectData from "@/data/PROJECT_DATA.json";
 
 export default function Project() {
   return (
-    <div className="w-full">
+    <section className="w-full py-10">
       <div className="font-black text-5xl uppercase space-y-2 mb-10 lg:text-7xl">
         <h1 className="text-neutral-500">Recent</h1>
         <h1>Project</h1>
@@ -13,6 +13,6 @@ export default function Project() {
           <ProjectCard project={project} key={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

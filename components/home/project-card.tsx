@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <CardContent className="flex flex-col lg:flex-row items-center gap-6 p-6">
-          <div className="relative w-full lg:w-[350px] aspect-[4/3] overflow-hidden rounded-md">
+          <div className="relative w-full md:w-[350px] aspect-[4/3] overflow-hidden rounded-md">
             <Image
               src={project.img}
               alt={project.project_name}
@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             />
           </div>
 
-          <div className="flex-1 space-y-2">
+          <div className="w-full flex-1 space-y-2">
             <div>
               <h2 className="font-bold text-3xl lg:text-4xl">
                 {project.project_name}
