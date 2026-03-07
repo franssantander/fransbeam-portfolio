@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function experienceCard() {
+export default function ExperienceCard() {
   return (
     <Card>
       <CardHeader>
