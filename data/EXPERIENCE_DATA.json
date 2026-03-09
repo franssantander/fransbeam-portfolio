@@ -11,5 +11,18 @@
       "Optimization and maintained, integration and load test to ensure reliability and performance.",
       "Improved backend efficiency through query optimization, reducing load times and increasing scalability."
     ]
+  },
+  {
+    "img": "/experience/vqlogo.jpg",
+    "company_name": "ViewQuest",
+    "position": "Software Engineer",
+    "years_active": "July 2025 - Present",
+    "experiences": [
+      "Collaborated closely with team and BA's to create accessible standard features that aligned, develop and best practices.",
+      "Developed a scalable web application using React and Laravel, applying S.O.L.I.D principles to enhance code readability, maintainability and reuseable function.",
+      "Developed a scalable web application using React and Laravel, applying S.O.L.I.D principles to enhance code readability, maintainability and reuseable function.",
+      "Optimization and maintained, integration and load test to ensure reliability and performance.",
+      "Improved backend efficiency through query optimization, reducing load times and increasing scalability."
+    ]
   }
 ]

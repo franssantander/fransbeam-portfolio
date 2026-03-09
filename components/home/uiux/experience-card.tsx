@@ -13,11 +13,11 @@ export default function ExperienceCard({
           className="rounded-md"
           src={experience.img}
           alt={experience.company_name}
-          width={63}
-          height={63}
+          width={46}
+          height={46}
         />
         <div>
-          <h1 className="font-bold text-2xl">{experience.company_name}</h1>
+          <h1 className="font-bold text-xl">{experience.company_name}</h1>
           <p className="text-neutral-500 dark:text-neutral-200">
             {experience.position}
           </p>
@@ -26,7 +26,10 @@ export default function ExperienceCard({
       <div className="space-y-6">
         <ul className="space-y-4">
           {experience.experiences.map((exp, index) => (
-            <li className="text-neutral-500 dark:text-neutral-300 text-md" key={index}>
+            <li
+              className="text-neutral-500 dark:text-neutral-300 text-md"
+              key={index}
+            >
               {exp}
             </li>
           ))}
