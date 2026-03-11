@@ -51,7 +51,7 @@ export default function Hero() {
                 Web Development, Mobile Development
               </h3>
             </CardContent>
-            <CardFooter className="flex justify-end bg-none">
+            <CardFooter className="flex justify-end">
               <Button size="icon" variant="outline">
                 <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
               </Button>
@@ -73,7 +73,7 @@ export default function Hero() {
               Figma, Wireframing, UIUX Design
               </h3>
             </CardContent>
-            <CardFooter className="flex justify-end bg-none">
+            <CardFooter className="flex justify-end">
               <Button size="icon" variant="outline">
                 <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
               </Button>

@@ -11,7 +11,7 @@ export default function UiuxCard({
   category,
 }: UiuxProject) {
   return (
-    <Link href={link || "/"} target="_blank">
+    <Link href={link || "/"}>
       <div className="group relative overflow-hidden rounded-xl bg-muted">
         <div className="relative w-full aspect-video">
           <Image
