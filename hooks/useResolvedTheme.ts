@@ -5,6 +5,7 @@ const subscribe = () => () => {};
 
 export function useResolvedTheme() {
   const { resolvedTheme } = useTheme();
+
   const isMounted = useSyncExternalStore(
     subscribe,
     () => true,

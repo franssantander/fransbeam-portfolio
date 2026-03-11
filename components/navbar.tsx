@@ -1,9 +1,9 @@
 "use client";
-import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "../assets/frans-dark-logo.svg";
+import DarkLogo from "../assets/frans-darklogo.svg";
+import WhiteLogo from "../assets/frans-whitelogo.svg";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Moon02Icon, Sun01FreeIcons } from "@hugeicons/core-free-icons";
 import {
@@ -17,20 +17,12 @@ import {
 } from "./ui";
 import { useTheme } from "next-themes";
 import NavLinks from "@/data/NAV_LINKS.json";
-
-const subscribe = () => () => {};
+import { useResolvedTheme } from "@/hooks/useResolvedTheme";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const { isDark, isMounted } = useResolvedTheme();
   const pathname = usePathname();
-
-  const mounted = useSyncExternalStore(
-    subscribe,
-    () => true,
-    () => false,
-  );
-
-  if (!mounted) return <div className="h-[65px] w-full" />;
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -40,15 +32,18 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-border bg-background/80">
       <div className="w-full flex items-center justify-between px-6 md:px-10 h-[65px] max-w-7xl mx-auto">
-        {/* Logo */}
         <Link href="/">
-          <Image
-            src={Logo}
-            alt="Frans Logo"
-            width={36}
-            height={36}
-            loading="eager"
-          />
+          {!isMounted ? (
+            <div className="w-9 h-9" />
+          ) : (
+            <Image
+              src={isDark ? WhiteLogo : DarkLogo}
+              alt="Frans Logo"
+              width={36}
+              height={36}
+              loading="eager"
+            />
+          )}
         </Link>
 
         {/* Desktop nav */}
@@ -74,7 +69,6 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right actions */}
         <div className="flex items-center gap-2">
           <Button
             size="icon"
@@ -82,10 +76,12 @@ export default function Navbar() {
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="rounded-full"
           >
-            <HugeiconsIcon
-              size={18}
-              icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
-            />
+            {isMounted && (
+              <HugeiconsIcon
+                size={18}
+                icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
+              />
+            )}
           </Button>
 
           <Sheet>
@@ -135,11 +131,14 @@ export default function Navbar() {
                   className="w-full justify-start gap-3 text-sm text-muted-foreground"
                   onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 >
-                  <HugeiconsIcon
-                    size={16}
-                    icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
-                  />
-                  {theme === "light" ? "Dark mode" : "Light mode"}
+                  {isMounted && (
+                    <HugeiconsIcon
+                      size={16}
+                      icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
+                    />
+                  )}
+                  {isMounted &&
+                    (theme === "light" ? "Dark mode" : "Light mode")}
                 </Button>
               </div>
             </SheetContent>

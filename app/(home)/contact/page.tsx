@@ -39,7 +39,7 @@ const SOCIALS = [
   },
 ];
 
-const email = "your@email.com";
+const email = "santanderfrancisbeam@gmail.com";
 
 export default function ContactPage() {
   return (
@@ -184,16 +184,22 @@ export default function ContactPage() {
               Prefer a formal document? Download my resume for a full overview
               of my experience, skills, and education.
             </p>
-            <Link href="/francis-santander-resume.pdf" target="_blank" download>
-              <Button
-                variant="outline"
-                className="gap-2 rounded-full px-6"
-                size="lg"
+            <div>
+              <Link
+                href="/francis-santander-resume.pdf"
+                target="_blank"
+                download
               >
-                <HugeiconsIcon icon={FileDownloadFreeIcons} size={18} />
-                Download Resume
-              </Button>
-            </Link>
+                <Button
+                  variant="outline"
+                  className="gap-2 rounded-full px-6"
+                  size="lg"
+                >
+                  <HugeiconsIcon icon={FileDownloadFreeIcons} size={18} />
+                  Download Resume
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
