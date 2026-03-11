@@ -2,25 +2,22 @@
 import { Skills } from "@/interfaces/index";
 import StackIcon from "tech-stack-icons";
 import { useResolvedTheme } from "@/hooks/useResolvedTheme";
+import { Badge } from "@/components/ui";
 
-export default function SkillsCard({
-  icon,
-  name,
-  category,
-  hasVariant,
-}: Skills) {
+export default function SkillsCard({ icon, name, hasVariant }: Skills) {
   const { isDark } = useResolvedTheme();
+
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+    <div className="group flex flex-col items-center gap-2 w-14">
       <StackIcon
-        className="w-16 h-16"
+        className="w-7 h-7"
         name={icon}
         variant={hasVariant ? (isDark ? "dark" : "light") : undefined}
       />
-      <div>
-        <h1 className="font-bold text-2xl">{name}</h1>
-        <h1 className="text-neutral-400 font-medium">{category}</h1>
-      </div>
+
+      <span className="text-xs text-muted-foreground text-center leading-tight line-clamp-2">
+        {name}
+      </span>
     </div>
   );
 }

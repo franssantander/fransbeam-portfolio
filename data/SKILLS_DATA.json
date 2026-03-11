@@ -31,7 +31,19 @@
   },
   {
     "icon": "mysql",
-    "name": "Mysql",
+    "name": "MySql",
+    "category": "Database",
+    "hasVariant": true
+  },
+  {
+    "icon": "mariadb",
+    "name": "MariaDB",
+    "category": "Database",
+    "hasVariant": true
+  },
+  {
+    "icon": "supabase",
+    "name": "Supabase",
     "category": "Database",
     "hasVariant": true
   },
@@ -60,6 +72,12 @@
     "hasVariant": true
   },
   {
+    "icon": "postman",
+    "name": "Postman",
+    "category": "Backend Development",
+    "hasVariant": true
+  },
+  {
     "icon": "reactnative",
     "name": "React Native",
     "category": "Mobile Development",
@@ -74,13 +92,25 @@
   {
     "icon": "figma",
     "name": "Figma",
-    "category": "Design Tool",
+    "category": "Design Tool & Productiviy",
     "hasVariant": true
   },
   {
     "icon": "framer",
     "name": "Framer",
-    "category": "Design Tool",
+    "category": "Design Tool & Productiviy",
+    "hasVariant": true
+  },
+  {
+    "icon": "wordpress",
+    "name": "WordPress",
+    "category": "Design Tool & Productiviy",
+    "hasVariant": true
+  },
+  {
+    "icon": "notion",
+    "name": "Notion",
+    "category": "Design Tool & Productiviy",
     "hasVariant": true
   },
   {
