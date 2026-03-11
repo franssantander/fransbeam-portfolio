@@ -33,7 +33,7 @@ export default function Contact() {
               (item) => (
                 <span
                   key={item}
-                  className="text-xs px-3 py-1 rounded-full border border-border text-muted-foreground"
+                  className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
                 >
                   {item}
                 </span>
