@@ -20,6 +20,7 @@ export interface Experience {
   company_name: string;
   position: string;
   years_active: string;
+  employment_type: string;
   experiences: string[];
 }
 

@@ -2,6 +2,7 @@
 import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "../assets/frans-dark-logo.svg";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Moon02Icon, Sun01FreeIcons } from "@hugeicons/core-free-icons";
@@ -21,6 +22,7 @@ const subscribe = () => () => {};
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const pathname = usePathname();
 
   const mounted = useSyncExternalStore(
     subscribe,
@@ -30,9 +32,15 @@ export default function Navbar() {
 
   if (!mounted) return <div className="h-[65px] w-full" />;
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-border bg-background/80">
       <div className="w-full flex items-center justify-between px-6 md:px-10 h-[65px] max-w-7xl mx-auto">
+        {/* Logo */}
         <Link href="/">
           <Image
             src={Logo}
@@ -43,19 +51,30 @@ export default function Navbar() {
           />
         </Link>
 
+        {/* Desktop nav */}
         <ul className="hidden lg:flex items-center gap-1">
           {NavLinks.map(({ label, href }) => (
             <li key={label}>
               <Link
                 href={href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-md hover:bg-accent transition-colors duration-150"
+                className={`relative text-sm font-medium px-3 py-1.5 rounded-md transition-colors duration-150
+                  ${
+                    isActive(href)
+                      ? "text-foreground bg-accent"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                  }`}
               >
                 {label}
+                {/* Active underline dot */}
+                {isActive(href) && (
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[6px] h-1 w-1 rounded-full bg-foreground" />
+                )}
               </Link>
             </li>
           ))}
         </ul>
 
+        {/* Right actions */}
         <div className="flex items-center gap-2">
           <Button
             size="icon"
@@ -86,15 +105,24 @@ export default function Navbar() {
               <SheetHeader>
                 <SheetTitle>Menu</SheetTitle>
               </SheetHeader>
-              <ul className="flex flex-col gap-1">
+
+              <ul className="flex flex-col gap-1 mt-4">
                 {NavLinks.map(({ label, href }) => (
                   <li key={label}>
                     <SheetClose asChild>
                       <Link
                         href={href}
-                        className="block text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-2.5 rounded-md hover:bg-accent transition-colors duration-150"
+                        className={`flex items-center justify-between text-sm font-medium px-3 py-2.5 rounded-md transition-colors duration-150
+                          ${
+                            isActive(href)
+                              ? "text-foreground bg-accent"
+                              : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                          }`}
                       >
                         {label}
+                        {isActive(href) && (
+                          <span className="h-1.5 w-1.5 rounded-full bg-foreground shrink-0" />
+                        )}
                       </Link>
                     </SheetClose>
                   </li>
