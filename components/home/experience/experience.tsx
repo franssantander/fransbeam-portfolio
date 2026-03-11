@@ -1,5 +1,5 @@
 import ExperienceData from "@/data/EXPERIENCE_DATA.json";
-import ExperienceCard from "../uiux/experience-card";
+import ExperienceCard from "./experience-card";
 
 export default function Experience() {
   return (

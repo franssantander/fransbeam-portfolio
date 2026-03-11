@@ -6,6 +6,14 @@ export interface Project {
   link: string;
 }
 
+export interface UiuxProject {
+  img: string;
+  project_name: string;
+  category?: string;
+  description: string;
+  link: string;
+}
+
 export interface Experience {
   img: string;
   company_name: string;
