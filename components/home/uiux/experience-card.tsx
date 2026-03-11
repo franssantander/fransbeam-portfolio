@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Experience from "@/interfaces/index";
+import { Experience } from "@/interfaces/index";
 
 export default function ExperienceCard({
   experience,

@@ -2,76 +2,97 @@
   {
     "icon": "react",
     "name": "React.js",
-    "category": "Frontend Development"
+    "category": "Frontend Development",
+    "hasVariant": true
   },
   {
     "icon": "nextjs2",
     "name": "Next.js",
-    "category": "Frontend Development"
+    "category": "Frontend Development",
+    "hasVariant": true
   },
   {
     "icon": "typescript",
     "name": "TypeScript",
-    "category": "Frontend Development"
+    "category": "Frontend Development",
+    "hasVariant": true
   },
   {
     "icon": "js",
     "name": "JavaScript",
-    "category": "Frontend Development"
+    "category": "Frontend Development",
+    "hasVariant": true
   },
   {
     "icon": "vuejs",
     "name": "Vue.js",
-    "category": "Frontend Development"
+    "category": "Frontend Development",
+    "hasVariant": true
   },
   {
     "icon": "mysql",
     "name": "Mysql",
-    "category": "Database"
+    "category": "Database",
+    "hasVariant": true
   },
   {
     "icon": "laravel",
     "name": "Laravel",
-    "category": "Backend Development"
+    "category": "Backend Development",
+    "hasVariant": true
   },
   {
     "icon": "php",
     "name": "PHP",
-    "category": "Backend Development"
+    "category": "Backend Development",
+    "hasVariant": true
   },
   {
     "icon": "nodejs",
     "name": "Node.js",
-    "category": "Backend Development"
+    "category": "Backend Development",
+    "hasVariant": true
   },
   {
     "icon": "expressjs",
     "name": "Express.js",
-    "category": "Backend Development"
+    "category": "Backend Development",
+    "hasVariant": true
+  },
+  {
+    "icon": "reactnative",
+    "name": "React Native",
+    "category": "Mobile Development",
+    "hasVariant": true
   },
   {
     "icon": "expo",
     "name": "Expo",
-    "category": "Mobile Development"
+    "category": "Mobile Development",
+    "hasVariant": true
   },
   {
     "icon": "figma",
     "name": "Figma",
-    "category": "Design Tool"
+    "category": "Design Tool",
+    "hasVariant": true
   },
   {
     "icon": "framer",
     "name": "Framer",
-    "category": "Design Tool"
+    "category": "Design Tool",
+    "hasVariant": true
   },
   {
     "icon": "cypress",
     "name": "Cypress",
-    "category": "Test Automation"
+    "category": "Test Automation",
+    "hasVariant": true
   },
   {
     "icon": "docker",
     "name": "Docker",
-    "category": "Container"
+    "category": "Container",
+    "hasVariant": true
   }
 ]

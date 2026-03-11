@@ -3,7 +3,7 @@ import Hero from "@/components/home/hero";
 import Project from "@/components/home/projects/project";
 import Uiux from "@/components/home/uiux/ui-ux";
 import Experience from "@/components/home/experience/experience";
-import Skills from "@/components/home/skills/Skills";
+import Skills from "@/components/home/skills/skills";
 
 export default function HomePage() {
   return (

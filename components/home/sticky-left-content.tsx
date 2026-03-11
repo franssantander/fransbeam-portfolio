@@ -2,8 +2,6 @@
 
 import francisImage from "@/assets/francis-img.jpg";
 import StackIcon from "tech-stack-icons";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import TECH_STACK from "@/data/TECH_STACK.json";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -14,17 +12,10 @@ import {
   Linkedin02FreeIcons,
 } from "@hugeicons/core-free-icons";
 import Link from "next/link";
+import { useResolvedTheme } from "@/hooks/useResolvedTheme";
 
 export default function StickyLeftContent() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const currentVariant = mounted && resolvedTheme === "dark" ? "dark" : "light";
-
+  const { isDark } = useResolvedTheme();
   return (
     <div className="w-full lg:w-1/3 lg:sticky lg:top-1/2 lg:-translate-y-1/2 flex flex-col items-center justify-center gap-4 text-center h-fit">
       <div className="relative h-40 w-40 lg:h-80 lg:w-80 overflow-hidden rounded-full ">
@@ -48,7 +39,9 @@ export default function StickyLeftContent() {
               key={tech.name}
               className="w-6 h-6 lg:w-8 lg:h-8"
               name={tech.name}
-              variant={tech.hasVariant ? currentVariant : undefined}
+              variant={
+                tech.hasVariant ? (isDark ? "dark" : "light") : undefined
+              }
             />
           ))}
         </div>

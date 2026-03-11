@@ -3,7 +3,7 @@ import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUpRight03Icon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
-import Project from "@/interfaces";
+import { Project } from "@/interfaces";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (

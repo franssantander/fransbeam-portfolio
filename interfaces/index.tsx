@@ -1,4 +1,4 @@
-export default interface Project {
+export interface Project {
   img: string;
   project_name: string;
   category?: string;
@@ -6,10 +6,17 @@ export default interface Project {
   link: string;
 }
 
-export default interface Experience {
+export interface Experience {
   img: string;
   company_name: string;
   position: string;
   years_active: string;
   experiences: string[];
+}
+
+export interface Skills {
+  icon: string;
+  name: string;
+  category?: string;
+  hasVariant: boolean;
 }
