@@ -14,7 +14,7 @@ import { Badge } from "../ui";
 
 export default function StickyLeftContent() {
   return (
-    <div className="w-full lg:w-2/5 lg:sticky lg:top-24 flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit">
+    <div className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit">
       <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full ">
         <Image
           src={francisImage}

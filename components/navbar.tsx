@@ -5,17 +5,17 @@ import Link from "next/link";
 import Logo from "../assets/frans-dark-logo.svg";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Moon02Icon, Sun01FreeIcons } from "@hugeicons/core-free-icons";
-import { Button, Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui";
+import {
+  Button,
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetHeader,
+  SheetTitle,
+} from "./ui";
 import { useTheme } from "next-themes";
-
-const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
-  { label: "Designs", href: "#designs" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
-];
+import NavLinks from "@/data/NAV_LINKS.json";
 
 const subscribe = () => () => {};
 
@@ -33,7 +33,6 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-border bg-background/80">
       <div className="w-full flex items-center justify-between px-6 md:px-10 h-[65px] max-w-7xl mx-auto">
-        {/* Logo */}
         <Link href="/">
           <Image
             src={Logo}
@@ -44,9 +43,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop nav */}
         <ul className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map(({ label, href }) => (
+          {NavLinks.map(({ label, href }) => (
             <li key={label}>
               <Link
                 href={href}
@@ -58,9 +56,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Right actions */}
         <div className="flex items-center gap-2">
-          {/* Theme toggle */}
           <Button
             size="icon"
             variant="ghost"
@@ -73,7 +69,6 @@ export default function Navbar() {
             />
           </Button>
 
-          {/* Mobile menu */}
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -88,8 +83,11 @@ export default function Navbar() {
               side="right"
               className="w-64 flex flex-col pt-14 px-6"
             >
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
               <ul className="flex flex-col gap-1">
-                {NAV_LINKS.map(({ label, href }) => (
+                {NavLinks.map(({ label, href }) => (
                   <li key={label}>
                     <SheetClose asChild>
                       <Link
@@ -103,7 +101,6 @@ export default function Navbar() {
                 ))}
               </ul>
 
-              {/* Theme toggle inside drawer */}
               <div className="mt-auto border-t border-border pt-6 pb-2">
                 <Button
                   variant="ghost"

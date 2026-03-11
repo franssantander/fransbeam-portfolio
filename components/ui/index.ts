@@ -12,3 +12,4 @@ export * from "./select";
 export * from "./separator";
 export * from "./textarea";
 export * from "./avatar";
+export * from "./sheet";

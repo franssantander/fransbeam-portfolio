@@ -2,7 +2,6 @@
 import { Skills } from "@/interfaces/index";
 import StackIcon from "tech-stack-icons";
 import { useResolvedTheme } from "@/hooks/useResolvedTheme";
-import { Badge } from "@/components/ui";
 
 export default function SkillsCard({ icon, name, hasVariant }: Skills) {
   const { isDark } = useResolvedTheme();
