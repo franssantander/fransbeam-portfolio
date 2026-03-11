@@ -4,6 +4,7 @@ import Project from "@/components/home/projects/project";
 import Uiux from "@/components/home/uiux/uiux";
 import Experience from "@/components/home/experience/experience";
 import Skills from "@/components/home/skills/skills";
+import Contact from "@/components/home/contact/contact";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
           <Uiux />
           <Experience />
           <Skills />
+          <Contact />
         </div>
       </div>
     </div>
