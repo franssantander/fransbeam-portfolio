@@ -30,7 +30,7 @@ export default function DesignsPage() {
 
       <div className="columns-1 sm:columns-2 gap-5 space-y-5">
         {UiuxData.map((project, index) => (
-          <Link key={index} href={project.link || "/"} target="_blank">
+          <Link key={index} href={`/designs/${project.slug}` || "/"}>
             <div className="group relative break-inside-avoid overflow-hidden rounded-xl bg-muted mb-5">
               <div className="relative w-full aspect-[4/3]">
                 <Image

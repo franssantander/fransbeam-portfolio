@@ -5,13 +5,13 @@ import { ArrowUpRight03Icon } from "@hugeicons/core-free-icons";
 import { UiuxProject } from "@/interfaces";
 
 export default function UiuxCard({
-  link,
+  slug,
   img,
   project_name,
   category,
 }: UiuxProject) {
   return (
-    <Link href={link || "/"}>
+    <Link href={slug || "/"}>
       <div className="group relative overflow-hidden rounded-xl bg-muted">
         <div className="relative w-full aspect-video">
           <Image

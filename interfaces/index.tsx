@@ -8,12 +8,25 @@ export interface Project {
   techstack?: { icon: string; hasVariant: boolean }[];
 }
 
-export interface UiuxProject {
+export interface UiuxImages {
+  hero: string;
+  palette: string;
+  typography: string;
+  wireframe: string;
+  outcomes: string[];
+}
+
+export interface Uiux {
+  slug: string;
   img: string;
   project_name: string;
-  category?: string;
+  category: string;
+  type: string;
+  year: string;
   description: string;
-  link: string;
+  overview: string;
+  tools: string[];
+  images: UiuxImages;
 }
 
 export interface Experience {
