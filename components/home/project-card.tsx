@@ -39,7 +39,7 @@ export default function ProjectCard({
                 {project.category}
               </p>
               {isLive ? (
-                <span className="flex items-center gap-1 text-xs text-emerald-500">
+                <span className="flex items-center gap-1 text-xs text-emerald-500 font-semibold">
                   <span className="relative flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
@@ -47,7 +47,7 @@ export default function ProjectCard({
                   Live
                 </span>
               ) : project.github ? (
-                <span className="text-xs text-muted-foreground flex items-center gap-1">
+                <span className="text-xs text-muted-foreground flex items-center gap-1 font-semibold">
                   <HugeiconsIcon icon={Github01FreeIcons} size={12} />
                   Source only
                 </span>

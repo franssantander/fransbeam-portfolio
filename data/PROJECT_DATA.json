@@ -5,7 +5,14 @@
     "category": "Full-Stack",
     "description": "A modern real estate platform built for seamless property management and rental experiences.",
     "link": "",
-    "github": "/"
+    "github": "/",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": true },
+      { "icon": "laravel", "hasVariant": false },
+      { "icon": "mysql", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/localpo.jpg",
@@ -13,7 +20,12 @@
     "category": "Full-Stack",
     "description": "A SaaS web application designed to streamline the job hiring process by connecting job seekers with employers efficiently.",
     "link": "",
-    "github": "https://github.com/franssantander/localpo-web-app/tree/dev"
+    "github": "https://github.com/franssantander/localpo-web-app/tree/dev",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/rjavancena.jpg",
@@ -21,7 +33,12 @@
     "category": "Full-Stack",
     "description": "A comprehensive Inventory Management System and Point of Sale (POS) solution designed for managing sales, inventory, and users efficiently.",
     "link": "",
-    "github": "https://github.com/franssantander/rjavancena-pos-web-app/tree/dev"
+    "github": "https://github.com/franssantander/rjavancena-pos-web-app/tree/dev",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/rsvp.jpg",
@@ -29,7 +46,12 @@
     "category": "Full-Stack",
     "description": "A freelance full-stack web app built for an 18th birthday celebration — featuring a digital invitation and RSVP system where guests can confirm attendance in real time, powered by Next.js and Supabase.",
     "link": "https://angel-rsvp-18thbirthday.vercel.app/",
-    "github": "https://github.com/franssantander/angel-rsvp"
+    "github": "https://github.com/franssantander/angel-rsvp",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/frogman.jpg",
@@ -37,15 +59,25 @@
     "category": "Frontend",
     "description": "A seamless online shopping experience for customers while giving merchants full control over their store management.",
     "link": "https://franssantander.github.io/frogman-ecommerce-react/",
-    "github": "https://github.com/franssantander/frogman-ecommerce-react"
+    "github": "https://github.com/franssantander/frogman-ecommerce-react",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/basicclothing.jpg",
     "project_name": "Basic Clothing E-Commerce",
     "category": "Frontend",
-    "description": "Stylish e-commerce platform designed specifically for clothing and fashion brands.",
+    "description": "Stylish e-commerce platform designed specifically for clothing and fashion brands. It offers a seamless shopping experience with a sleek, minimalist design that highlights the latest trends in apparel.",
     "link": "https://franssantander.github.io/basic-clothing-frontend/",
-    "github": "https://github.com/franssantander/basic-clothing-frontend"
+    "github": "https://github.com/franssantander/basic-clothing-frontend",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   },
   {
     "img": "/projects/drumpad.jpg",
@@ -53,6 +85,11 @@
     "category": "Frontend",
     "description": "An interactive music-making application designed for beatmakers, producers, and music enthusiasts. It provides an intuitive drum pad interface that allows users to create rhythms.",
     "link": "https://franssantander.github.io/Drumpad-App-JS/",
-    "github": "https://github.com/franssantander/Drumpad-App-JS"
+    "github": "https://github.com/franssantander/Drumpad-App-JS",
+    "techstack": [
+      { "icon": "nextjs2", "hasVariant": true },
+      { "icon": "typescript", "hasVariant": true },
+      { "icon": "tailwindcss", "hasVariant": false }
+    ]
   }
 ]

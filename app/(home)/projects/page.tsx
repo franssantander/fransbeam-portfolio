@@ -2,7 +2,12 @@ import ProjectData from "@/data/PROJECT_DATA.json";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
-import ProjectCard from "@/components/home/project-card";
+import ProjectPageCard from "@/components/projects/project-page-card";
+
+export const metadata = {
+  title: "Projects — Francis Santander",
+  description: "A collection of web and mobile projects I've built.",
+};
 
 export default function ProjectsPage() {
   return (
@@ -24,9 +29,10 @@ export default function ProjectsPage() {
           {ProjectData.length} works
         </span>
       </div>
+
       <div className="flex flex-col divide-y divide-border">
         {ProjectData.map((project, index) => (
-          <ProjectCard project={project} key={index} index={index} />
+          <ProjectPageCard project={project} key={index} index={index} />
         ))}
       </div>
     </main>

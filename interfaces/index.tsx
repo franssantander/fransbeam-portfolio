@@ -5,6 +5,7 @@ export interface Project {
   github?: string;
   description: string;
   link: string;
+  techstack?: { icon: string; hasVariant: boolean }[];
 }
 
 export interface UiuxProject {
