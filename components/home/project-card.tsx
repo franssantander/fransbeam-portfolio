@@ -19,13 +19,11 @@ export default function ProjectCard({
   return (
     <Link href={project.link || project.github || "/"} target="_blank">
       <div className="group flex flex-col sm:flex-row items-start gap-6 py-8 transition-all duration-200">
-        {/* Index number */}
         <span className="hidden sm:block text-xs text-muted-foreground tabular-nums pt-1 w-6 shrink-0">
           {String(index + 1).padStart(2, "0")}
         </span>
 
-        {/* Thumbnail */}
-        <div className="relative w-full sm:w-44 md:w-52 aspect-video overflow-hidden rounded-lg shrink-0 bg-muted">
+        <div className="relative w-full sm:w-44 md:w-52 lg:w-60 aspect-video overflow-hidden rounded-lg shrink-0 bg-muted">
           <Image
             src={project.img}
             alt={project.project_name}
@@ -34,14 +32,12 @@ export default function ProjectCard({
           />
         </div>
 
-        {/* Content */}
         <div className="flex-1 flex flex-col justify-between gap-3 min-w-0">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <p className="text-xs text-muted-foreground uppercase tracking-widest">
                 {project.category}
               </p>
-              {/* Live / Source badge */}
               {isLive ? (
                 <span className="flex items-center gap-1 text-xs text-emerald-500">
                   <span className="relative flex h-1.5 w-1.5">
@@ -67,7 +63,6 @@ export default function ProjectCard({
           </div>
         </div>
 
-        {/* Arrow or GitHub icon depending on live status */}
         <div className="shrink-0 self-center opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200">
           {isLive ? (
             <HugeiconsIcon

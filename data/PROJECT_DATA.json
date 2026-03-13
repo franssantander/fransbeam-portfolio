@@ -2,49 +2,57 @@
   {
     "img": "/projects/1.jpg",
     "project_name": "RentHaven",
-    "category": "Full-Stack Web App",
+    "category": "Full-Stack",
     "description": "A modern real estate platform built for seamless property management and rental experiences.",
     "link": "",
-    "github": ""
+    "github": "/"
   },
   {
-    "img": "/projects/1.jpg",
-    "project_name": "Local Po",
-    "category": "Full-Stack Web App",
-    "description": "A modern real estate platform built for seamless property management and rental experiences.",
+    "img": "/projects/localpo.jpg",
+    "project_name": "Local Po (Online Job)",
+    "category": "Full-Stack",
+    "description": "A SaaS web application designed to streamline the job hiring process by connecting job seekers with employers efficiently.",
     "link": "",
-    "github": ""
+    "github": "https://github.com/franssantander/localpo-web-app/tree/dev"
   },
   {
-    "img": "/projects/1.jpg",
+    "img": "/projects/rjavancena.jpg",
     "project_name": "RJ Avancena (POS)",
-    "category": "Full-Stack Web App",
-    "description": "A modern real estate platform built for seamless property management and rental experiences.",
+    "category": "Full-Stack",
+    "description": "A comprehensive Inventory Management System and Point of Sale (POS) solution designed for managing sales, inventory, and users efficiently.",
     "link": "",
-    "github": ""
+    "github": "https://github.com/franssantander/rjavancena-pos-web-app/tree/dev"
   },
   {
-    "img": "/projects/1.jpg",
+    "img": "/projects/rsvp.jpg",
+    "project_name": "Birthday RSVP",
+    "category": "Full-Stack",
+    "description": "A freelance full-stack web app built for an 18th birthday celebration — featuring a digital invitation and RSVP system where guests can confirm attendance in real time, powered by Next.js and Supabase.",
+    "link": "https://angel-rsvp-18thbirthday.vercel.app/",
+    "github": "https://github.com/franssantander/angel-rsvp"
+  },
+  {
+    "img": "/projects/frogman.jpg",
     "project_name": "Frogman Merchant",
-    "category": "Full-Stack Web App",
-    "description": "A modern real estate platform built for seamless property management and rental experiences.",
-    "link": "",
-    "github": ""
+    "category": "Frontend",
+    "description": "A seamless online shopping experience for customers while giving merchants full control over their store management.",
+    "link": "https://franssantander.github.io/frogman-ecommerce-react/",
+    "github": "https://github.com/franssantander/frogman-ecommerce-react"
   },
   {
-    "img": "/projects/1.jpg",
+    "img": "/projects/basicclothing.jpg",
     "project_name": "Basic Clothing E-Commerce",
-    "category": "Full-Stack Web App",
-    "description": "A modern real estate platform built for seamless property management and rental experiences.",
-    "link": "",
-    "github": ""
+    "category": "Frontend",
+    "description": "Stylish e-commerce platform designed specifically for clothing and fashion brands.",
+    "link": "https://franssantander.github.io/basic-clothing-frontend/",
+    "github": "https://github.com/franssantander/basic-clothing-frontend"
   },
   {
-    "img": "/projects/1.jpg",
-    "project_name": "DrumPad App",
-    "category": "Full-Stack Web App",
-    "description": "A modern real estate platform built for seamless property management and rental experiences.",
-    "link": "",
-    "github": ""
+    "img": "/projects/drumpad.jpg",
+    "project_name": "Drum Pad",
+    "category": "Frontend",
+    "description": "An interactive music-making application designed for beatmakers, producers, and music enthusiasts. It provides an intuitive drum pad interface that allows users to create rhythms.",
+    "link": "https://franssantander.github.io/Drumpad-App-JS/",
+    "github": "https://github.com/franssantander/Drumpad-App-JS"
   }
 ]
