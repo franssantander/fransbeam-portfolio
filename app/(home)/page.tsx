@@ -5,6 +5,7 @@ import Uiux from "@/components/home/uiux/uiux";
 import Experience from "@/components/home/experience/experience";
 import Skills from "@/components/home/skills/skills";
 import Contact from "@/components/home/contact/contact";
+import { FadeUp } from "@/components/animations/fade-up";
 
 export default function HomePage() {
   return (
@@ -12,12 +13,24 @@ export default function HomePage() {
       <div className="flex flex-col lg:flex-row w-full items-start gap-16 py-16 lg:py-24">
         <StickyLeftContent />
         <div className="flex flex-col space-y-24 w-full lg:w-3/5">
-          <Hero />
-          <Project />
-          <Uiux />
-          <Experience />
-          <Skills />
-          <Contact />
+          <FadeUp inView delay={0.1}>
+            <Hero />
+          </FadeUp>
+          <FadeUp inView delay={0.1}>
+            <Project />
+          </FadeUp>
+          <FadeUp inView delay={0.1}>
+            <Uiux />
+          </FadeUp>
+          <FadeUp inView delay={0.1}>
+            <Experience />
+          </FadeUp>
+          <FadeUp inView delay={0.1}>
+            <Skills />
+          </FadeUp>
+          <FadeUp inView delay={0.1}>
+            <Contact />
+          </FadeUp>
         </div>
       </div>
     </div>

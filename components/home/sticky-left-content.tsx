@@ -11,10 +11,14 @@ import {
 } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { Badge } from "../ui";
+import { FadeUp } from "../animations/fade-up";
 
 export default function StickyLeftContent() {
   return (
-    <div className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit">
+    <FadeUp
+      delay={0}
+      className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit"
+    >
       <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full ">
         <Image
           src={francisImage}
@@ -76,6 +80,6 @@ export default function StickyLeftContent() {
           <HugeiconsIcon icon={FileDownloadFreeIcons} size={22} />
         </Link>
       </div>
-    </div>
+    </FadeUp>
   );
 }
