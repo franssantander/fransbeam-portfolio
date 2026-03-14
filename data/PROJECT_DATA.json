@@ -10,8 +10,8 @@
       { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
       { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
       { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
-      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
-      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
     ]
   },
   {
@@ -25,8 +25,8 @@
       { "icon": "react", "name": "React.js", "hasVariant": true },
       { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
       { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
-      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
-      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
     ]
   },
   {
@@ -40,8 +40,8 @@
       { "icon": "react", "name": "React.js", "hasVariant": true },
       { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
       { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
-      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
-      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
     ]
   },
   {
@@ -54,8 +54,21 @@
     "techstack": [
       { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
       { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
-      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false },
-      { "icon": "supabase", "name": "Supabase", "hasVariant": false }
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "supabase", "name": "Supabase", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/francisletters.png",
+    "project_name": "Francis Letters (My Blog)",
+    "category": "Frontend",
+    "description": "A space for self reflection and documenting the journey: creating, experimenting, and learning along the way.",
+    "link": "https://francis-letters.vercel.app/",
+    "github": "https://github.com/franssantander/francis-letters",
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
     ]
   },
   {
@@ -68,7 +81,7 @@
     "techstack": [
       { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
       { "icon": "js", "name": "JavaScript", "hasVariant": true },
-      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false }
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
     ]
   },
   {
@@ -81,7 +94,7 @@
     "techstack": [
       { "icon": "react", "name": "React.js", "hasVariant": true },
       { "icon": "js", "name": "JavaScript", "hasVariant": true },
-      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false }
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
     ]
   },
   {
@@ -94,7 +107,7 @@
     "techstack": [
       { "icon": "html5", "name": "HTML", "hasVariant": true },
       { "icon": "css3", "name": "CSS", "hasVariant": true },
-      { "icon": "js", "name": "JavaScript", "hasVariant": false }
+      { "icon": "js", "name": "JavaScript", "hasVariant": true }
     ]
   }
 ]
