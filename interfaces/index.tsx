@@ -5,7 +5,7 @@ export interface Project {
   github?: string;
   description: string;
   link: string;
-  techstack?: { icon: string; hasVariant: boolean }[];
+  techstack?: { icon: string; name: string; hasVariant: boolean }[];
 }
 
 export interface UiuxImages {

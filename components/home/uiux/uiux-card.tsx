@@ -2,16 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUpRight03Icon } from "@hugeicons/core-free-icons";
-import { UiuxProject } from "@/interfaces";
+import { Uiux } from "@/interfaces";
 
-export default function UiuxCard({
-  slug,
-  img,
-  project_name,
-  category,
-}: UiuxProject) {
+export default function UiuxCard({ slug, img, project_name, category }: Uiux) {
   return (
-    <Link href={slug || "/"}>
+    <Link href={`designs/${slug}` || "/"}>
       <div className="group relative overflow-hidden rounded-xl bg-muted">
         <div className="relative w-full aspect-video">
           <Image

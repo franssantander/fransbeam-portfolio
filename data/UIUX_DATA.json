@@ -6,11 +6,11 @@
     "category": "UI/UX Design",
     "type": "Landing Page",
     "year": "2023",
-    "description": "A modern analytics dashboard designed for performance monitoring and data visualization, focused on clarity and quick insight delivery.",
+    "description": "",
     "overview": "Hyperview was designed to help teams monitor real-time performance metrics through a clean, information-dense dashboard. The challenge was balancing data density with visual clarity — giving users everything they need without overwhelming them.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/hyperview/hyperview.jpg",
+      "hero": "/designs/hyperview/hyperview-cover.jpg",
       "palette": "/designs/hyperview/palette.jpg",
       "typography": "/designs/hyperview/typography.jpg",
       "wireframe": "/designs/hyperview/wireframe.png",
@@ -24,23 +24,22 @@
   {
     "slug": "medal-of-honor",
     "img": "/designs/moh/moh.jpg",
-    "project_name": "Medal of Honor",
+    "project_name": "Medal of Honor (Case Study)",
     "category": "UI/UX Design",
-    "type": "Mobile App",
-    "year": "2024",
-    "description": "A recognition and rewards mobile app designed to celebrate achievements and milestones within organizations and teams.",
+    "type": "Landing Page",
+    "year": "2023",
+    "description": "",
     "overview": "Medal of Honor is a gamified recognition platform that makes employee appreciation feel meaningful and fun. The design focused on creating an emotional, celebratory experience that motivates continued excellence.",
-    "tools": ["Figma", "Protopie"],
+    "tools": ["Figma"],
     "images": {
-      "hero": "/designs/moh/moh.jpg",
+      "hero": "/designs/moh/moh-cover.jpg",
       "palette": "/designs/moh/palette.jpg",
       "typography": "/designs/moh/typography.jpg",
-      "wireframe": "/designs/moh/wireframe.jpg",
+      "wireframe": "/designs/moh/wireframe.png",
       "outcomes": [
         "/designs/moh/outcome1.jpg",
         "/designs/moh/outcome2.jpg",
-        "/designs/moh/outcome3.jpg",
-        "/designs/moh/outcome4.jpg"
+        "/designs/moh/outcome3.png"
       ]
     }
   },
@@ -51,19 +50,18 @@
     "category": "UI/UX Design",
     "type": "Mobile App",
     "year": "2023",
-    "description": "A public transit companion app designed to simplify commuting through real-time tracking, route planning, and fare management.",
-    "overview": "Transit Ease tackles the frustration of daily commuting by providing a unified experience for route discovery, live tracking, and contactless payments — all in a minimal, accessible interface.",
-    "tools": ["Figma", "FigJam"],
+    "description": "",
+    "overview": "The goal of this design project is to create a user-friendly and intuitive mobile app for TransitEase, a comprehensive and efficient bus transportation service. The TransitEase Bus App will provide users with a seamless and convenient way to navigate bus routes, access real-time bus arrival information, plan their journeys, and stay informed about service updates",
+    "tools": ["Figma"],
     "images": {
-      "hero": "/designs/transitease/transitease.jpg",
+      "hero": "/designs/transitease/transitease-cover.jpg",
       "palette": "/designs/transitease/palette.jpg",
       "typography": "/designs/transitease/typography.jpg",
-      "wireframe": "/designs/transitease/wireframe.jpg",
+      "wireframe": "/designs/transitease/sitemap.jpg",
       "outcomes": [
         "/designs/transitease/outcome1.jpg",
         "/designs/transitease/outcome2.jpg",
-        "/designs/transitease/outcome3.jpg",
-        "/designs/transitease/outcome4.jpg"
+        "/designs/transitease/outcome3.png"
       ]
     }
   },
@@ -74,19 +72,18 @@
     "category": "UI/UX Design",
     "type": "E-Commerce App",
     "year": "2023",
-    "description": "A minimal e-commerce mobile app for a clothing brand, focused on a clean browsing and checkout experience that puts the product first.",
+    "description": "",
     "overview": "Basic Clothing is a fashion e-commerce app designed around the philosophy of restraint — letting the clothes speak. The design strips away visual noise to create a premium, editorial shopping experience.",
     "tools": ["Figma"],
     "images": {
       "hero": "/designs/basicclothing/basicclothing.jpg",
       "palette": "/designs/basicclothing/palette.jpg",
       "typography": "/designs/basicclothing/typography.jpg",
-      "wireframe": "/designs/basicclothing/wireframe.jpg",
+      "wireframe": "/designs/basicclothing/wireframe.png",
       "outcomes": [
         "/designs/basicclothing/outcome1.jpg",
         "/designs/basicclothing/outcome2.jpg",
-        "/designs/basicclothing/outcome3.jpg",
-        "/designs/basicclothing/outcome4.jpg"
+        "/designs/basicclothing/outcome3.png"
       ]
     }
   },
@@ -97,19 +94,18 @@
     "category": "UI/UX Design",
     "type": "Mobile App",
     "year": "2023",
-    "description": "A mobile app that blends food delivery with social discovery — helping users find great food and like-minded people to share meals with.",
+    "description": "",
     "overview": "This project combined two distinct user needs — finding good food and meeting new people — into a single cohesive experience. The design challenge was making both journeys feel natural without one overshadowing the other.",
-    "tools": ["Figma", "FigJam", "Protopie"],
+    "tools": ["Figma"],
     "images": {
       "hero": "/designs/foodapp/foodapp.jpg",
       "palette": "/designs/foodapp/palette.jpg",
       "typography": "/designs/foodapp/typography.jpg",
-      "wireframe": "/designs/foodapp/wireframe.jpg",
+      "wireframe": "/designs/foodapp/wireframe.png",
       "outcomes": [
         "/designs/foodapp/outcome1.jpg",
         "/designs/foodapp/outcome2.jpg",
-        "/designs/foodapp/outcome3.jpg",
-        "/designs/foodapp/outcome4.jpg"
+        "/designs/foodapp/outcome3.png"
       ]
     }
   }

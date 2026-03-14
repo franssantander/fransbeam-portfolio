@@ -12,6 +12,7 @@ import {
   WebDesign02FreeIcons,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -52,9 +53,11 @@ export default function Hero() {
               </h3>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Button size="icon" variant="outline">
-                <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
-              </Button>
+              <Link href="/projects">
+                <Button size="icon" variant="outline">
+                  <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
 
@@ -70,13 +73,15 @@ export default function Hero() {
             </CardHeader>
             <CardContent className="pb-4">
               <h3 className="text-xl font-bold leading-snug uppercase">
-              Figma, Wireframing, UIUX Design
+                Figma, Wireframing, UIUX Design
               </h3>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Button size="icon" variant="outline">
-                <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
-              </Button>
+              <Link href="/designs">
+                <Button size="icon" variant="outline">
+                  <HugeiconsIcon icon={ArrowRight02Icon} size={18} />
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>

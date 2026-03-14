@@ -7,11 +7,11 @@
     "link": "",
     "github": "/",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": true },
-      { "icon": "laravel", "hasVariant": false },
-      { "icon": "mysql", "hasVariant": false }
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
     ]
   },
   {
@@ -22,9 +22,11 @@
     "link": "",
     "github": "https://github.com/franssantander/localpo-web-app/tree/dev",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
     ]
   },
   {
@@ -35,9 +37,11 @@
     "link": "",
     "github": "https://github.com/franssantander/rjavancena-pos-web-app/tree/dev",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": false },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": false }
     ]
   },
   {
@@ -48,9 +52,10 @@
     "link": "https://angel-rsvp-18thbirthday.vercel.app/",
     "github": "https://github.com/franssantander/angel-rsvp",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false },
+      { "icon": "supabase", "name": "Supabase", "hasVariant": false }
     ]
   },
   {
@@ -61,9 +66,9 @@
     "link": "https://franssantander.github.io/frogman-ecommerce-react/",
     "github": "https://github.com/franssantander/frogman-ecommerce-react",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false }
     ]
   },
   {
@@ -74,9 +79,9 @@
     "link": "https://franssantander.github.io/basic-clothing-frontend/",
     "github": "https://github.com/franssantander/basic-clothing-frontend",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": false }
     ]
   },
   {
@@ -87,9 +92,9 @@
     "link": "https://franssantander.github.io/Drumpad-App-JS/",
     "github": "https://github.com/franssantander/Drumpad-App-JS",
     "techstack": [
-      { "icon": "nextjs2", "hasVariant": true },
-      { "icon": "typescript", "hasVariant": true },
-      { "icon": "tailwindcss", "hasVariant": false }
+      { "icon": "html5", "name": "HTML", "hasVariant": true },
+      { "icon": "css3", "name": "CSS", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": false }
     ]
   }
 ]

@@ -4,7 +4,13 @@ import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
 import { notFound } from "next/navigation";
-import { Badge } from "@/components/ui";
+import {
+  Badge,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui";
 
 export function generateStaticParams() {
   return UiuxData.map((project) => ({ slug: project.slug }));
@@ -44,9 +50,6 @@ export default async function Page({
           <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9]">
             {project.project_name}
           </h1>
-          <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
-            {project.description}
-          </p>
         </div>
         <div className="flex flex-col items-start sm:items-end gap-2 shrink-0">
           <span className="text-xs text-muted-foreground uppercase tracking-widest">
@@ -67,7 +70,7 @@ export default async function Page({
       </div>
 
       {/* Hero image */}
-      <div className="relative w-full aspect-video overflow-hidden rounded-2xl bg-muted mb-16">
+      <Card className="relative w-full aspect-video overflow-hidden rounded-2xl mb-16">
         <Image
           src={project.images.hero}
           alt={project.project_name}
@@ -75,7 +78,7 @@ export default async function Page({
           className="object-cover"
           priority
         />
-      </div>
+      </Card>
 
       {/* Content sections */}
       <div className="flex flex-col divide-y divide-border">
@@ -93,6 +96,7 @@ export default async function Page({
         </div>
 
         {/* Color Palette + Typography */}
+
         <div className="py-12 flex flex-col sm:flex-row gap-8">
           <div className="sm:w-48 shrink-0">
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
@@ -101,32 +105,41 @@ export default async function Page({
           </div>
           <div className="hidden sm:block w-px bg-border shrink-0" />
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className="space-y-3">
-              <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                Color Palette
-              </p>
-              <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-muted">
-                <Image
-                  src={project.images.palette}
-                  alt="Color Palette"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="text-xs text-muted-foreground uppercase tracking-widest">
-                Typography
-              </p>
-              <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-muted">
-                <Image
-                  src={project.images.typography}
-                  alt="Typography"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            <Card className="overflow-hidden">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xs text-muted-foreground uppercase tracking-widest font-normal">
+                  Color Palette
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="relative w-full aspect-video overflow-hidden">
+                  <Image
+                    src={project.images.palette}
+                    alt="Color Palette"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xs text-muted-foreground uppercase tracking-widest font-normal">
+                  Typography
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="relative w-full aspect-video overflow-hidden">
+                  <Image
+                    src={project.images.typography}
+                    alt="Typography"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
@@ -139,13 +152,17 @@ export default async function Page({
           </div>
           <div className="hidden sm:block w-px bg-border shrink-0" />
           <div className="flex-1">
-            <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-muted">
-              <Image
-                src={project.images.wireframe}
-                alt="Wireframe"
-                fill
-                className="object-cover"
-              />
+            <div className="flex-1">
+              <Card className="overflow-hidden p-0">
+                <Image
+                  src={project.images.wireframe}
+                  alt="Wireframe"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="w-full h-auto"
+                />
+              </Card>
             </div>
           </div>
         </div>
@@ -158,19 +175,25 @@ export default async function Page({
             </p>
           </div>
           <div className="hidden sm:block w-px bg-border shrink-0" />
-          <div className="flex-1 grid grid-cols-1 gap-4">
+          <div className="flex-1 flex flex-col gap-4">
             {project.images.outcomes.map((img, i) => (
-              <div
-                key={i}
-                className="relative w-full aspect-video overflow-hidden rounded-xl bg-muted"
-              >
-                <Image
-                  src={img}
-                  alt={`Outcome ${i + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Card key={i} className="overflow-hidden">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-xs text-muted-foreground uppercase tracking-widest font-normal">
+                    Outcome {String(i + 1).padStart(2, "0")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <Image
+                    src={img}
+                    alt={`Outcome ${i + 1}`}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-auto"
+                  />
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

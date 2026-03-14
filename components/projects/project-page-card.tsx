@@ -82,7 +82,7 @@ export default function ProjectPageCard({
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techstack.map(
-                (tech: { icon: string; hasVariant: boolean }) => (
+                (tech: { icon: string; name: string; hasVariant: boolean }) => (
                   <Badge
                     key={tech.icon}
                     variant="secondary"
@@ -99,7 +99,7 @@ export default function ProjectPageCard({
                           : undefined
                       }
                     />
-                    <span className="text-xs">{tech.icon}</span>
+                    <span className="text-xs">{tech.name}</span>
                   </Badge>
                 ),
               )}

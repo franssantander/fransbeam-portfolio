@@ -4,10 +4,6 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
 import ProjectPageCard from "@/components/projects/project-page-card";
 
-export const metadata = {
-  title: "Projects — Francis Santander",
-  description: "A collection of web and mobile projects I've built.",
-};
 
 export default function ProjectsPage() {
   return (
