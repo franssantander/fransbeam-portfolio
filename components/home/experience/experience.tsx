@@ -22,7 +22,7 @@ export default function Experience() {
           </h1>
         </div>
         <span className="text-muted-foreground text-sm tabular-nums mb-1">
-          <CountUp to={ExperienceData.length} delay={0.2} /> companies
+          {ExperienceData.length} companies
         </span>
       </div>
 

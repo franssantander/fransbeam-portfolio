@@ -41,7 +41,7 @@ export default function ExperiencePage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.4 }}
         >
-          <CountUp to={ExperienceData.length} delay={0.5} /> companies
+          {ExperienceData.length} companies
         </motion.span>
       </div>
 

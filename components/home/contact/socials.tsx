@@ -8,6 +8,7 @@ import {
 import {
   Github01FreeIcons,
   Linkedin02FreeIcons,
+  Instagram,
   FileDownloadFreeIcons,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -26,6 +27,12 @@ export default function Socials() {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/francebeam/",
       icon: Linkedin02FreeIcons,
+      download: false,
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/franss.dev/",
+      icon: Instagram,
       download: false,
     },
     {
