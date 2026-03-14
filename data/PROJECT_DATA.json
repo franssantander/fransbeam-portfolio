@@ -1,0 +1,113 @@
+[
+  {
+    "img": "/projects/1.jpg",
+    "project_name": "RentHaven",
+    "category": "Full-Stack",
+    "description": "A modern real estate platform built for seamless property management and rental experiences.",
+    "link": "",
+    "github": "/",
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/localpo.jpg",
+    "project_name": "Local Po (Online Job)",
+    "category": "Full-Stack",
+    "description": "A SaaS web application designed to streamline the job hiring process by connecting job seekers with employers efficiently.",
+    "link": "",
+    "github": "https://github.com/franssantander/localpo-web-app/tree/dev",
+    "techstack": [
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/rjavancena.jpg",
+    "project_name": "RJ Avancena (POS)",
+    "category": "Full-Stack",
+    "description": "A comprehensive Inventory Management System and Point of Sale (POS) solution designed for managing sales, inventory, and users efficiently.",
+    "link": "",
+    "github": "https://github.com/franssantander/rjavancena-pos-web-app/tree/dev",
+    "techstack": [
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "mysql", "name": "MySQL", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/rsvp.jpg",
+    "project_name": "Birthday RSVP",
+    "category": "Full-Stack",
+    "description": "A freelance full-stack web app built for an 18th birthday celebration — featuring a digital invitation and RSVP system where guests can confirm attendance in real time, powered by Next.js and Supabase.",
+    "link": "https://angel-rsvp-18thbirthday.vercel.app/",
+    "github": "https://github.com/franssantander/angel-rsvp",
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "supabase", "name": "Supabase", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/francisletters.png",
+    "project_name": "Francis Letters (My Blog)",
+    "category": "Frontend",
+    "description": "A space for self reflection and documenting the journey: creating, experimenting, and learning along the way.",
+    "link": "https://francis-letters.vercel.app/",
+    "github": "https://github.com/franssantander/francis-letters",
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/frogman.jpg",
+    "project_name": "Frogman Merchant",
+    "category": "Frontend",
+    "description": "A seamless online shopping experience for customers while giving merchants full control over their store management.",
+    "link": "https://franssantander.github.io/frogman-ecommerce-react/",
+    "github": "https://github.com/franssantander/frogman-ecommerce-react",
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/basicclothing.jpg",
+    "project_name": "Basic Clothing E-Commerce",
+    "category": "Frontend",
+    "description": "Stylish e-commerce platform designed specifically for clothing and fashion brands. It offers a seamless shopping experience with a sleek, minimalist design that highlights the latest trends in apparel.",
+    "link": "https://franssantander.github.io/basic-clothing-frontend/",
+    "github": "https://github.com/franssantander/basic-clothing-frontend",
+    "techstack": [
+      { "icon": "react", "name": "React.js", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true }
+    ]
+  },
+  {
+    "img": "/projects/drumpad.jpg",
+    "project_name": "Drum Pad",
+    "category": "Frontend",
+    "description": "An interactive music-making application designed for beatmakers, producers, and music enthusiasts. It provides an intuitive drum pad interface that allows users to create rhythms.",
+    "link": "https://franssantander.github.io/Drumpad-App-JS/",
+    "github": "https://github.com/franssantander/Drumpad-App-JS",
+    "techstack": [
+      { "icon": "html5", "name": "HTML", "hasVariant": true },
+      { "icon": "css3", "name": "CSS", "hasVariant": true },
+      { "icon": "js", "name": "JavaScript", "hasVariant": true }
+    ]
+  }
+]
