@@ -11,6 +11,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { Button } from "@/components/ui";
 import Footer from "@/components/footer";
+import { ScrambleText } from "@/components/animations/scramble-text";
 
 const AVAILABILITY = [
   "Full-time roles",
@@ -44,7 +45,6 @@ const email = "santanderfrancisbeam@gmail.com";
 export default function ContactPage() {
   return (
     <main className="px-6 md:px-10 max-w-7xl mx-auto py-16 lg:py-24">
-      {/* Back */}
       <Link
         href="/"
         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
@@ -56,8 +56,12 @@ export default function ContactPage() {
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
         <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
-          <h1 className="text-muted-foreground">Let&apos;s</h1>
-          <h1>Work Together</h1>
+          <h1 className="text-muted-foreground">
+            <ScrambleText text="Let's" delay={0} />
+          </h1>
+          <h1>
+            <ScrambleText text="Work Together" delay={0.1} />
+          </h1>
         </div>
       </div>
 

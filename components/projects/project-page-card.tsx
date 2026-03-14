@@ -10,6 +10,7 @@ import { Project } from "@/interfaces";
 import StackIcon from "tech-stack-icons";
 import { useResolvedTheme } from "@/hooks/useResolvedTheme";
 import { Badge, Button } from "../ui";
+import { motion } from "framer-motion";
 
 export default function ProjectPageCard({
   project,
@@ -22,20 +23,35 @@ export default function ProjectPageCard({
   const isLive = !!project.link;
 
   return (
-    <div className="group py-10 grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 items-start">
+    <motion.div
+      className="group py-10 grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 items-start"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.55,
+        delay: index < 3 ? index * 0.1 : 0, // only stagger first 3, rest trigger individually
+        ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number],
+      }}
+    >
+      {/* Left — image */}
       <Link
         href={project.link || project.github || "/"}
         target="_blank"
-        className="block"
+        className="block overflow-hidden rounded-xl"
       >
-        <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-muted">
+        <motion.div
+          className="relative w-full aspect-video bg-muted"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           <Image
             src={project.img}
             alt={project.project_name}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
       </Link>
 
       {/* Right — content */}
@@ -74,7 +90,7 @@ export default function ProjectPageCard({
           </p>
         </div>
 
-        {/* Tech stack icons */}
+        {/* Tech stack */}
         {project.techstack && project.techstack.length > 0 && (
           <div className="space-y-2">
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
@@ -131,6 +147,6 @@ export default function ProjectPageCard({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
