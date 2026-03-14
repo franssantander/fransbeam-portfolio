@@ -13,3 +13,4 @@ export * from "./separator";
 export * from "./textarea";
 export * from "./avatar";
 export * from "./sheet";
+export * from "./tooltip";

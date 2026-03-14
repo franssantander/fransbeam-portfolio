@@ -8,7 +8,6 @@ import { groupByCategory } from "@/utils/groupByCategory";
 import { motion, Variants } from "framer-motion";
 import { ScrambleText } from "@/components/animations/scramble-text";
 import { CountUp } from "@/components/animations/count-up";
-import RevealLine from "@/components/animations/reveal-line";
 
 const rowVariants: Variants = {
   hidden: {},

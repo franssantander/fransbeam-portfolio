@@ -1,13 +1,9 @@
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Mail01FreeIcons,
-  Github01FreeIcons,
-  Linkedin02FreeIcons,
-  FileDownloadFreeIcons,
-} from "@hugeicons/core-free-icons";
+import { Mail01FreeIcons } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { Button } from "@/components/ui";
 import Footer from "@/components/footer";
+import Socials from "./socials";
 
 export default function Contact() {
   const email = "santanderfrancisbeam@gmail.com";
@@ -72,38 +68,17 @@ export default function Contact() {
           </div>
         </div>
 
+        {/* Socials */}
         <div className="py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div className="sm:w-48 shrink-0">
             <p className="text-xs text-muted-foreground uppercase tracking-widest">
               Elsewhere
             </p>
           </div>
-          <div className="flex items-center gap-5">
-            <Link
-              href="https://github.com/franssantander"
-              target="_blank"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <HugeiconsIcon icon={Github01FreeIcons} size={20} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/francebeam/"
-              target="_blank"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <HugeiconsIcon icon={Linkedin02FreeIcons} size={20} />
-            </Link>
-            <Link
-              href="/francis-santander-resume.pdf"
-              target="_blank"
-              download
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <HugeiconsIcon icon={FileDownloadFreeIcons} size={20} />
-            </Link>
-          </div>
+          <Socials />
         </div>
       </div>
+
       <Footer />
     </section>
   );

@@ -12,6 +12,40 @@ import {
 import Link from "next/link";
 import { Badge } from "../ui";
 import { FadeUp } from "../animations/fade-up";
+import { motion } from "framer-motion";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+const SOCIALS = [
+  {
+    label: "GitHub",
+    href: "https://github.com/franssantander",
+    icon: Github01FreeIcons,
+    download: false,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/francebeam/",
+    icon: Linkedin02FreeIcons,
+    download: false,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/franss.dev/",
+    icon: Instagram,
+    download: false,
+  },
+  {
+    label: "Download CV",
+    href: "/files/Francis Beam Santander - Resume.pdf",
+    icon: FileDownloadFreeIcons,
+    download: true,
+  },
+];
 
 export default function StickyLeftContent() {
   return (
@@ -19,7 +53,7 @@ export default function StickyLeftContent() {
       delay={0}
       className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit"
     >
-      <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full ">
+      <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full">
         <Image
           src={francisImage}
           alt="Francis Santander"
@@ -39,7 +73,6 @@ export default function StickyLeftContent() {
         </Badge>
       </div>
 
-      {/* Bio */}
       <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
         Building modern web and mobile applications with a sharp eye for detail
         and a passion for great user experience.
@@ -49,37 +82,33 @@ export default function StickyLeftContent() {
       <div className="w-full border-t border-border" />
 
       {/* Social links */}
-      <div className="flex items-center gap-5">
-        <Link
-          href="https://github.com/franssantander"
-          target="_blank"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <HugeiconsIcon icon={Github01FreeIcons} size={22} />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/francebeam/"
-          target="_blank"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <HugeiconsIcon icon={Linkedin02FreeIcons} size={22} />
-        </Link>
-        <Link
-          href="https://www.instagram.com/franss.dev/"
-          target="_blank"
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <HugeiconsIcon icon={Instagram} size={22} />
-        </Link>
-        <Link
-          href="/francis-santander-resume.pdf"
-          target="_blank"
-          download
-          className="text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <HugeiconsIcon icon={FileDownloadFreeIcons} size={22} />
-        </Link>
-      </div>
+      <TooltipProvider delayDuration={100}>
+        <div className="flex items-center gap-5">
+          {SOCIALS.map(({ label, href, icon, download }) => (
+            <Tooltip key={label}>
+              <TooltipTrigger asChild>
+                <motion.div
+                  whileHover={{ y: -3, scale: 1.15 }}
+                  whileTap={{ scale: 0.92 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                >
+                  <Link
+                    href={href}
+                    target="_blank"
+                    download={download || undefined}
+                    className="text-muted-foreground hover:text-foreground transition-colors block"
+                  >
+                    <HugeiconsIcon icon={icon} size={22} />
+                  </Link>
+                </motion.div>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" className="text-xs">
+                {label}
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+      </TooltipProvider>
     </FadeUp>
   );
 }

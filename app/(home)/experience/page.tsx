@@ -8,7 +8,6 @@ import { getYearsOfExperience } from "@/utils/getYearsOfExperience";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CountUp } from "@/components/animations/count-up";
-import RevealLine from "@/components/animations/reveal-line";
 import { ScrambleText } from "@/components/animations/scramble-text";
 
 export default function ExperiencePage() {
