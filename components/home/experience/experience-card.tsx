@@ -7,9 +7,12 @@ export default function ExperienceCard({
   experience: Experience;
 }) {
   return (
-    <div className="w-full py-8 flex flex-col sm:flex-row gap-6 group">
+    <div className="w-full py-8 flex flex-col sm:flex-row gap-6 group border-b border-border last:border-0">
       <div className="flex flex-col gap-3 sm:w-48 shrink-0">
         <div className="flex items-center gap-3">
+          {/* Timeline dot — sits on the vertical line */}
+          <div className="hidden sm:flex absolute left-[11.33rem] w-[7px] h-[7px] rounded-full bg-foreground ring-2 ring-background mt-1 shrink-0" />
+
           <Image
             className="rounded-lg ring-1 ring-border"
             src={experience.img}
@@ -31,7 +34,7 @@ export default function ExperienceCard({
         </span>
       </div>
 
-      <div className="hidden sm:block w-px bg-border shrink-0" />
+      <div className="hidden sm:block w-px bg-transparent shrink-0" />
 
       <ul className="flex-1 space-y-3">
         {experience.experiences.map((exp, index) => (
