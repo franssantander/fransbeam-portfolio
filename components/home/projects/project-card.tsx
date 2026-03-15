@@ -18,7 +18,7 @@ export default function ProjectCard({
 
   return (
     <Link href={project.link || project.github || "/"} target="_blank">
-      <div className="group flex flex-col sm:flex-row items-start gap-6 py-8 transition-all duration-200">
+      <div className="group flex flex-col sm:flex-row items-start gap-4 sm:gap-6 py-5 sm:py-8 transition-all duration-200">
         <span className="hidden sm:block text-xs text-muted-foreground tabular-nums pt-1 w-6 shrink-0">
           {String(index + 1).padStart(2, "0")}
         </span>

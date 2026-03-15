@@ -27,7 +27,7 @@ const CARDS = [
     icon: WebDesign02FreeIcons,
     title: "Web & Mobile Development",
     href: "/projects",
-    hook: "I build fast, scalable, and production-ready applications from frontend to backend.",
+    hook: "I build fast, scalable, and production-ready applications from backend to frontend.",
     tags: ["Next.js", "React Native", "Laravel", "MySQL"],
     backIcons: [CodeCircleIcon, SmartPhone01FreeIcons],
   },

@@ -3,7 +3,6 @@ import ExperienceData from "@/data/EXPERIENCE_DATA.json";
 import ExperienceCard from "./experience-card";
 import { getYearsOfExperience } from "@/utils/getYearsOfExperience";
 import { ScrambleText } from "@/components/animations/scramble-text";
-import { CountUp } from "@/components/animations/count-up";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 

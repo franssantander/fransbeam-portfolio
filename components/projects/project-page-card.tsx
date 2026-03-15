@@ -30,11 +30,10 @@ export default function ProjectPageCard({
       viewport={{ once: true, margin: "-80px" }}
       transition={{
         duration: 0.55,
-        delay: index < 3 ? index * 0.1 : 0, // only stagger first 3, rest trigger individually
+        delay: index < 3 ? index * 0.1 : 0, 
         ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number],
       }}
     >
-      {/* Left — image */}
       <Link
         href={project.link || project.github || "/"}
         target="_blank"
