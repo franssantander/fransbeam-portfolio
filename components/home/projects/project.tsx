@@ -1,4 +1,4 @@
-import ProjectCard from "../project-card";
+import ProjectCard from "./project-card";
 import ProjectData from "@/data/PROJECT_DATA.json";
 import { ScrambleText } from "@/components/animations/scramble-text";
 import { CountUp } from "@/components/animations/count-up";
