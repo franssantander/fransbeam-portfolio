@@ -85,7 +85,10 @@ export default function ContactPage() {
             </p>
             <div className="flex items-center gap-4">
               <Link href={`mailto:${email}`}>
-                <Button className="gap-2 rounded-full px-6" size="lg">
+                <Button
+                  className="gap-2 rounded-full px-6 hover:bg-muted-foreground"
+                  size="lg"
+                >
                   <HugeiconsIcon icon={Mail01FreeIcons} size={18} />
                   Email Me
                 </Button>

@@ -12,6 +12,18 @@
     "hasVariant": true
   },
   {
+    "icon": "vuejs",
+    "name": "Vue.js",
+    "category": "Frontend Development",
+    "hasVariant": true
+  },
+  {
+    "icon": "angular",
+    "name": "Angular",
+    "category": "Frontend Development",
+    "hasVariant": true
+  },
+  {
     "icon": "typescript",
     "name": "TypeScript",
     "category": "Frontend Development",
@@ -20,12 +32,6 @@
   {
     "icon": "js",
     "name": "JavaScript",
-    "category": "Frontend Development",
-    "hasVariant": true
-  },
-  {
-    "icon": "vuejs",
-    "name": "Vue.js",
     "category": "Frontend Development",
     "hasVariant": true
   },
@@ -44,6 +50,12 @@
   {
     "icon": "supabase",
     "name": "Supabase",
+    "category": "Database",
+    "hasVariant": true
+  },
+  {
+    "icon": "appwrite",
+    "name": "Appwrite",
     "category": "Database",
     "hasVariant": true
   },
@@ -104,6 +116,12 @@
   {
     "icon": "wordpress",
     "name": "WordPress",
+    "category": "Design Tool & Productiviy",
+    "hasVariant": true
+  },
+  {
+    "icon": "webflow",
+    "name": "Webflow",
     "category": "Design Tool & Productiviy",
     "hasVariant": true
   },

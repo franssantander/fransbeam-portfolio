@@ -59,7 +59,7 @@ export default function Contact() {
           </div>
           <div className="flex-1 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Link href={`mailto:${email}`}>
-              <Button className="gap-2 rounded-full px-4" size="lg">
+              <Button className="gap-2 rounded-full px-4 hover:bg-muted-foreground" size="lg">
                 <HugeiconsIcon icon={Mail01FreeIcons} size={18} />
                 Email Me
               </Button>
