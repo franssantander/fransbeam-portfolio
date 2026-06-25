@@ -41,7 +41,7 @@ const SOCIALS = [
   },
   {
     label: "Download CV",
-    href: "/files/Francis Beam Santander - Resume.pdf",
+    href: "/files/Francis Beam Santander Resume.pdf",
     icon: FileDownloadFreeIcons,
     download: true,
   },

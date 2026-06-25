@@ -193,7 +193,7 @@ export default function ContactPage() {
             </p>
             <div>
               <Link
-                href="/files/Francis Beam Santander - Resume.pdf"
+                href="/files/Francis Beam Santander Resume.pdf"
                 target="_blank"
                 download
               >
