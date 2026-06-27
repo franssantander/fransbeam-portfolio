@@ -1,16 +1,31 @@
 [
   {
-    "img": "/experience/vqlogo.jpg",
-    "company_name": "ViewQuest",
-    "position": "Software Engineer",
-    "years_active": "Oct 2023 - Present",
+    "img": "/experience/esdsilogo.webp",
+    "company_name": "Elite Software and Data Security, Inc",
+    "position": "Software Developer",
+    "years_active": "July 2025 - Present",
     "employment_type": "Full-time",
     "experiences": [
-      "Collaborated closely with team and BA's to create accessible standard features that aligned, develop and best practices.",
-      "Developed a scalable web application using React and Laravel, applying S.O.L.I.D principles to enhance code readability, maintainability and reuseable function.",
-      "Developed a scalable web application using React and Laravel, applying S.O.L.I.D principles to enhance code readability, maintainability and reuseable function.",
-      "Optimization and maintained, integration and load test to ensure reliability and performance.",
-      "Improved backend efficiency through query optimization, reducing load times and increasing scalability."
+      "Architected the database schema and system integration layer for a Crew Management System (CMS), defining data flow across web, middleware API Gateway, and mobile-consuming services.",
+      "Engineered a centralized API Gateway that decoupled core microservices (Vessel API, Ship Visitation Reporting) from direct database access, improving service isolation and long-term maintainability.",
+      "Collaborated cross-functionally to document API specifications, enabling consistent integration across downstream consumers and reducing developer onboarding time.",
+      "Contributed to the Ship Certificate Management System by building user activity logging, an in-app notification system, and a password waiver security feature across backend and frontend.",
+      "Designed end-to-end UI/UX in Figma for KOCS v2.0, an internal circular and document management system-covering multi-role flows for crew, admins, manning staff, and principals.",
+      "Designed the UI/UX workflows for KRBS Payroll, an internal payroll system, delivering accuracy-first layouts suited for sensitive financial data entry and processing."
+    ]
+  },
+  {
+    "img": "/experience/vqlogo.webp",
+    "company_name": "ViewQuest",
+    "position": "Software Engineer",
+    "years_active": "Oct 2023 - July 2025",
+    "employment_type": "Full-time",
+    "experiences": [
+      "Collaborated with cross-functional teams and business analysts to gather requirements and ship accessible, standards-aligned features across multiple product cycles.",
+      "Built and maintained scalable full-stack web applications, owning features from design to deployment while ensuring clean, maintainable codebases.",
+      "Drove frontend quality by designing and refining UI components, bridging engineering and design to deliver consistent, high-performance user experiences.",
+      "Established integration and load testing workflows to proactively monitor, troubleshoot, and maintain application reliability at scale.",
+      "Improved backend performance through query optimization, reducing response times and increasing system scalability across high-traffic endpoints."
     ]
   }
 ]

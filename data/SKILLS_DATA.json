@@ -140,7 +140,19 @@
   {
     "icon": "docker",
     "name": "Docker",
-    "category": "Container",
+    "category": "DevOps / Infrastructure",
+    "hasVariant": true
+  },
+  {
+    "icon": "nginx",
+    "name": "Nginx",
+    "category": "DevOps / Infrastructure",
+    "hasVariant": true
+  },
+  {
+    "icon": "linux",
+    "name": "Linux",
+    "category": "DevOps / Infrastructure",
     "hasVariant": true
   }
 ]
