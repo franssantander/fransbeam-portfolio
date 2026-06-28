@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   verification: {
     google:
-      "google-site-verification=Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
+      "Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
   },
   openGraph: {
     title: "Francis Beam Santander - Full-Stack Engineer",
