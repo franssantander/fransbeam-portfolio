@@ -25,9 +25,15 @@ export const metadata: Metadata = {
   keywords: [
     "Francis Beam Santander",
     "Francis Santander",
+    "Frans Santander",
+    "Francis",
+    "Francis Beam",
+    "Santander",
     "Full-Stack Software Engineer",
     "Software Engineer Philippines",
     "Full Stack Developer Philippines",
+    "Software Engineer",
+    "Software Developer",
     "React Developer",
     "Next.js Developer",
     "Laravel Developer",
@@ -45,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
 };
 
