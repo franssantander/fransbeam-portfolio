@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ScrollRestore } from "@/components/scroll-restore";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,8 +35,7 @@ export const metadata: Metadata = {
     "UI UX Designer Philippines",
   ],
   verification: {
-    google:
-      "Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
+    google: "Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
   },
   openGraph: {
     title: "Francis Beam Santander - Full-Stack Engineer",
@@ -91,6 +91,7 @@ export default function RootLayout({
         </body>
       </html>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
