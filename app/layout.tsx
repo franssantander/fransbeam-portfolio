@@ -33,6 +33,17 @@ export const metadata: Metadata = {
     "TypeScript Developer",
     "UI UX Designer Philippines",
   ],
+  verification: {
+    google:
+      "google-site-verification=Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
+  },
+  openGraph: {
+    title: "Francis Beam Santander - Full-Stack Engineer",
+    description:
+      "ortfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
+    url: "https://francissantander.com",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.svg",
   },
@@ -46,6 +57,24 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" suppressHydrationWarning>
+        <head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Francis Beam Santander",
+                url: "https://francissantander.com",
+                jobTitle: "Full-Stack Software Engineer",
+                sameAs: [
+                  "https://www.linkedin.com/in/francebeam",
+                  "https://github.com/franssantander",
+                ],
+              }),
+            }}
+          />
+        </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
