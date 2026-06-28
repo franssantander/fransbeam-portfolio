@@ -17,8 +17,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fransbeam Portfolio",
-  description: "Francis Santander Portfolio",
+  metadataBase: new URL("https://francissantander.com"),
+  title: "Francis Beam Santander - Full-Stack Engineer",
+  description:
+    "Portfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
+  keywords: [
+    "Francis Beam Santander",
+    "Francis Santander",
+    "Full-Stack Software Engineer",
+    "Software Engineer Philippines",
+    "Full Stack Developer Philippines",
+    "React Developer",
+    "Next.js Developer",
+    "Laravel Developer",
+    "TypeScript Developer",
+    "UI UX Designer Philippines",
+  ],
   icons: {
     icon: "/favicon.svg",
   },
