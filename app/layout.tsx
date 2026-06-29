@@ -80,13 +80,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: [
-      {
-        url: "/favicon.png",
-        type: "image/png",
-        sizes: "32x32",
-      },
-    ],
+    icon: "/favicon.ico",
   },
 };
 
