@@ -19,7 +19,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://francissantander.com"),
-  title: "Francis Beam Santander - Full-Stack Engineer",
+  title: {
+    default: "Francis Beam Santander - Full-Stack Engineer",
+    template: "%s | Francis Beam Santander",
+  },
   description:
     "Portfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
   keywords: [
@@ -40,15 +43,41 @@ export const metadata: Metadata = {
     "TypeScript Developer",
     "UI UX Designer Philippines",
   ],
+  authors: [
+    { name: "Francis Beam Santander", url: "https://francissantander.com" },
+  ],
+  creator: "Francis Beam Santander",
   verification: {
     google: "Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
+  alternates: {
+    canonical: "https://francissantander.com",
   },
   openGraph: {
     title: "Francis Beam Santander - Full-Stack Engineer",
     description:
-      "ortfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
+      "Portfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
     url: "https://francissantander.com",
+    siteName: "Francis Beam Santander",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Francis Beam Santander - Full-Stack Engineer",
+      },
+    ],
   },
   icons: {
     icon: [
@@ -77,11 +106,25 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Person",
                 name: "Francis Beam Santander",
+                alternateName: [
+                  "Francis Santander",
+                  "Frans Santander",
+                  "Francis Beam",
+                  "Santander",
+                  "Francis",
+                  "Frans",
+                ],
                 url: "https://francissantander.com",
                 jobTitle: "Full-Stack Software Engineer",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "PH",
+                  addressRegion: "Philippines",
+                },
                 sameAs: [
                   "https://www.linkedin.com/in/francebeam",
                   "https://github.com/franssantander",
+                  "https://www.instagram.com/franss.dev",
                 ],
               }),
             }}
