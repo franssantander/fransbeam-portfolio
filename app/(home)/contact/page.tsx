@@ -193,7 +193,7 @@ export default function ContactPage() {
             </p>
             <div>
               <Link
-                href="/files/Francis Beam Santander Resume.pdf"
+                href={process.env.NEXT_PUBLIC_RESUME_URL || ""}
                 target="_blank"
                 download
               >
