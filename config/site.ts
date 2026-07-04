@@ -1,19 +1,18 @@
 export const siteConfig = {
   name: "Francis Beam Santander",
   shortName: "Francis Santander",
-
   title: {
     default:
       "Francis Santander — Full-Stack Software Engineer & UI/UX Designer",
     template: "%s | Francis Santander",
   },
-
+  email: "hello@francissantander.com",
   description:
     "I'm Francis Santander — a Full-Stack Software Engineer and UI/UX Designer from the Philippines. I design and develop modern, scalable web applications that combine clean architecture with intuitive, user-centered experiences.",
 
   url: "https://francissantander.com",
+  ogImage: "/og-image.png",
   locale: "en_US",
-
   images: {
     og: "/og-image.png",
     favicon: "/favicon.ico",
