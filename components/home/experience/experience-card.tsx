@@ -14,14 +14,14 @@ export default function ExperienceCard({
           <div className="hidden sm:flex absolute left-[11.33rem] w-[7px] h-[7px] rounded-full bg-foreground ring-2 ring-background mt-1 shrink-0" />
 
           <Image
-            className="rounded-lg ring-1 ring-border"
+            className="rounded-lg ring-1 ring-border object-contain w-10 h-10"
             src={experience.img}
             alt={experience.company_name}
             width={40}
             height={40}
           />
           <div>
-            <h2 className="font-bold text-sm leading-tight">
+            <h2 className="font-bold text-sm leading-tight font-geist">
               {experience.company_name}
             </h2>
             <p className="text-xs text-muted-foreground">

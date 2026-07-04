@@ -1,4 +1,5 @@
 "use client";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -36,13 +37,46 @@ export default function Navbar() {
           {!isMounted ? (
             <div className="w-9 h-9" />
           ) : (
-            <Image
-              src={isDark ? WhiteLogo : DarkLogo}
-              alt="Frans Logo"
-              width={36}
-              height={36}
-              loading="eager"
-            />
+            <motion.div
+              className="w-9 h-9 [perspective:600px]"
+              whileHover="hover"
+              initial="rest"
+            >
+              <motion.div
+                className="relative w-9 h-9"
+                variants={{
+                  rest: { rotateY: 0, rotateX: 0, scale: 1 },
+                  hover: { rotateY: 18, rotateX: -8, scale: 1.08 },
+                }}
+                transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={isDark ? "white" : "dark"}
+                    initial={{ rotateY: 90, opacity: 0 }}
+                    animate={{ rotateY: 0, opacity: 1 }}
+                    exit={{ rotateY: -90, opacity: 0 }}
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
+                    className="absolute inset-0"
+                    style={{ backfaceVisibility: "hidden" }}
+                  >
+                    <Image
+                      src={isDark ? WhiteLogo : DarkLogo}
+                      alt="Frans Logo"
+                      width={36}
+                      height={36}
+                      loading="eager"
+                      className={
+                        isDark
+                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]"
+                          : "drop-shadow-[0_0_10px_rgba(0,0,0,0.3)]"
+                      }
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </motion.div>
+            </motion.div>
           )}
         </Link>
 
@@ -60,7 +94,6 @@ export default function Navbar() {
                   }`}
               >
                 {label}
-                {/* Active underline dot */}
                 {isActive(href) && (
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[6px] h-1 w-1 rounded-full bg-foreground" />
                 )}

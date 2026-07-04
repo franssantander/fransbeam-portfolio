@@ -1,17 +1,16 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Mail01FreeIcons } from "@hugeicons/core-free-icons";
 import Link from "next/link";
-import { Button } from "@/components/ui";
+import { Badge, Button } from "@/components/ui";
 import Footer from "@/components/footer";
 import Socials from "./socials";
+import { siteConfig } from "@/config/site";
 
 export default function Contact() {
-  const email = "santanderfrancisbeam@gmail.com";
-
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">Let&apos;s</h1>
           <h1>Work Together</h1>
         </div>
@@ -26,13 +25,14 @@ export default function Contact() {
           </div>
           <div className="flex-1 flex flex-wrap gap-2">
             {["Full-time roles", "Freelance projects", "Collaborations"].map(
-              (item) => (
-                <span
-                  key={item}
-                  className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+              (item, index) => (
+                <Badge
+                  key={index}
+                  className="p-3 text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                  variant="outline"
                 >
                   {item}
-                </span>
+                </Badge>
               ),
             )}
           </div>
@@ -58,13 +58,22 @@ export default function Contact() {
             </p>
           </div>
           <div className="flex-1 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <Link href={`mailto:${email}`}>
-              <Button className="gap-2 rounded-full px-4 hover:bg-muted-foreground" size="lg">
+            <Link
+              href={`mailto:${siteConfig.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                className="gap-2 rounded-full px-4 hover:bg-muted-foreground"
+                size="lg"
+              >
                 <HugeiconsIcon icon={Mail01FreeIcons} size={18} />
                 Email Me
               </Button>
             </Link>
-            <span className="text-xs text-muted-foreground">{email}</span>
+            <span className="text-xs text-muted-foreground">
+              santanderfrancisbeam@gmail.com
+            </span>
           </div>
         </div>
 

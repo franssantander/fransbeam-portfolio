@@ -27,7 +27,7 @@ export default function DesignsPage() {
 
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <RevealLine delay={0.1}>
             <h1 className="text-muted-foreground">
               <ScrambleText text="UI/UX" delay={0} />
@@ -88,7 +88,9 @@ export default function DesignsPage() {
                     src={project.img}
                     alt={project.project_name}
                     fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority={index < 2}
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
@@ -96,7 +98,7 @@ export default function DesignsPage() {
                     {project.category}
                   </p>
                   <div className="flex items-center justify-between">
-                    <h3 className="text-white font-bold text-lg leading-tight">
+                    <h3 className="text-white font-bold text-lg leading-tight font-geist">
                       {project.project_name}
                     </h3>
                     <HugeiconsIcon

@@ -1,7 +1,7 @@
 [
   {
     "slug": "hyperview",
-    "img": "/designs/hyperview/hyperview.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/hyperview.avif",
     "project_name": "Hyperview",
     "category": "UI/UX Design",
     "type": "Landing Page",
@@ -10,20 +10,20 @@
     "overview": "A landing page designed for a music studio business, focused on conveying creativity and professionalism. The design balances bold typography with a dark, immersive aesthetic to reflect the studio's brand identity.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/hyperview/hyperview-cover.jpg",
-      "palette": "/designs/hyperview/palette.jpg",
-      "typography": "/designs/hyperview/typography.jpg",
-      "wireframe": "/designs/hyperview/wireframe.png",
+      "hero": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/hyperview-cover.avif",
+      "palette": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/palette.avif",
+      "typography": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/typography.avif",
+      "wireframe": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/wireframe.avif",
       "outcomes": [
-        "/designs/hyperview/outcome1.jpg",
-        "/designs/hyperview/outcome2.jpg",
-        "/designs/hyperview/outcome3.png"
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/outcome1.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/outcome2.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/hyperview/outcome3.avif"
       ]
     }
   },
   {
     "slug": "medal-of-honor",
-    "img": "/designs/moh/moh.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/moh.avif",
     "project_name": "Medal of Honor (Case Study)",
     "category": "UI/UX Design",
     "type": "Landing Page",
@@ -32,20 +32,20 @@
     "overview": "A landing page case study for Medal of Honor, designed to showcase the project's design process, visual identity, and key screens in a structured and compelling narrative format.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/moh/moh-cover.jpg",
-      "palette": "/designs/moh/palette.jpg",
-      "typography": "/designs/moh/typography.jpg",
-      "wireframe": "/designs/moh/wireframe.png",
+      "hero": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/moh-cover.avif",
+      "palette": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/palette.avif",
+      "typography": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/typography.avif",
+      "wireframe": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/wireframe.avif",
       "outcomes": [
-        "/designs/moh/outcome1.jpg",
-        "/designs/moh/outcome2.jpg",
-        "/designs/moh/outcome3.png"
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/outcome1.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/outcome2.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/moh/outcome3.avif"
       ]
     }
   },
   {
     "slug": "transit-ease",
-    "img": "/designs/transitease/transitease.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/transitease.avif",
     "project_name": "Transit Ease",
     "category": "UI/UX Design",
     "type": "Mobile App",
@@ -54,20 +54,20 @@
     "overview": "The goal of this design project is to create a user-friendly and intuitive mobile app for TransitEase, a comprehensive and efficient bus transportation service. The TransitEase Bus App will provide users with a seamless and convenient way to navigate bus routes, access real-time bus arrival information, plan their journeys, and stay informed about service updates.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/transitease/transitease-cover.jpg",
-      "palette": "/designs/transitease/palette.jpg",
-      "typography": "/designs/transitease/typography.jpg",
-      "wireframe": "/designs/transitease/sitemap.jpg",
+      "hero": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/transitease-cover.avif",
+      "palette": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/palette.avif",
+      "typography": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/typography.avif",
+      "wireframe": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/sitemap.avif",
       "outcomes": [
-        "/designs/transitease/outcome1.jpg",
-        "/designs/transitease/outcome2.jpg",
-        "/designs/transitease/outcome3.png"
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/outcome1.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/outcome2.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/transitease/outcome3.avif"
       ]
     }
   },
   {
     "slug": "basic-clothing",
-    "img": "/designs/basicclothing/basicclothing.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/basicclothing.avif",
     "project_name": "Basic Clothing",
     "category": "UI/UX Design",
     "type": "E-Commerce App",
@@ -76,20 +76,20 @@
     "overview": "Basic Clothing is a fashion e-commerce app designed around the philosophy of restraint — letting the clothes speak. The design strips away visual noise to create a premium, editorial shopping experience.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/basicclothing/basicclothing.jpg",
-      "palette": "/designs/basicclothing/palette.jpg",
-      "typography": "/designs/basicclothing/typography.jpg",
-      "wireframe": "/designs/basicclothing/wireframe.png",
+      "hero": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/basicclothing.avif",
+      "palette": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/palette.avif",
+      "typography": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/typography.avif",
+      "wireframe": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/wireframe.avif",
       "outcomes": [
-        "/designs/basicclothing/outcome1.jpg",
-        "/designs/basicclothing/outcome2.jpg",
-        "/designs/basicclothing/outcome3.png"
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/outcome1.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/outcome2.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/basicclothing/outcome3.avif"
       ]
     }
   },
   {
     "slug": "food-app",
-    "img": "/designs/foodapp/foodapp.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/foodapp.avif",
     "project_name": "Food App & Meal Dating",
     "category": "UI/UX Design",
     "type": "Mobile App",
@@ -98,14 +98,14 @@
     "overview": "This project combined two distinct user needs — finding good food and meeting new people — into a single cohesive experience. The design challenge was making both journeys feel natural without one overshadowing the other.",
     "tools": ["Figma"],
     "images": {
-      "hero": "/designs/foodapp/foodapp.jpg",
-      "palette": "/designs/foodapp/palette.jpg",
-      "typography": "/designs/foodapp/typography.jpg",
-      "wireframe": "/designs/foodapp/wireframe.png",
+      "hero": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/foodapp.avif",
+      "palette": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/palette.avif",
+      "typography": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/typography.avif",
+      "wireframe": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/wireframe.avif",
       "outcomes": [
-        "/designs/foodapp/outcome1.jpg",
-        "/designs/foodapp/outcome2.jpg",
-        "/designs/foodapp/outcome3.png"
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/outcome1.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/outcome2.avif",
+        "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/designs/foodapp/outcome3.avif"
       ]
     }
   }

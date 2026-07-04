@@ -48,7 +48,7 @@ export default function Page() {
             </Badge>
           </motion.div>
           <RevealLine delay={0.15}>
-            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9]">
+            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] font-geist">
               {project.project_name}
             </h1>
           </RevealLine>
@@ -60,7 +60,7 @@ export default function Page() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.25 }}
         >
-          <span className="text-xs text-muted-foreground uppercase tracking-widest">
+          <span className="text-xs text-muted-foreground uppercase tracking-widest font-geist">
             Year
           </span>
           <span className="font-black text-3xl">{project.year}</span>
@@ -92,6 +92,7 @@ export default function Page() {
             src={project.images.hero}
             alt={project.project_name}
             fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
             className="object-cover"
             priority
           />
@@ -135,6 +136,7 @@ export default function Page() {
                       src={project.images.palette}
                       alt="Color Palette"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain"
                     />
                   </div>
@@ -152,6 +154,7 @@ export default function Page() {
                       src={project.images.typography}
                       alt="Typography"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain"
                     />
                   </div>

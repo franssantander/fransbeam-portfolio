@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui";
 import Footer from "@/components/footer";
 import { ScrambleText } from "@/components/animations/scramble-text";
+import { siteConfig } from "@/config/site";
 
 const AVAILABILITY = [
   "Full-time roles",
@@ -40,8 +41,6 @@ const SOCIALS = [
   },
 ];
 
-const email = "santanderfrancisbeam@gmail.com";
-
 export default function ContactPage() {
   return (
     <main className="px-6 md:px-10 max-w-7xl mx-auto py-16 lg:py-24">
@@ -55,7 +54,7 @@ export default function ContactPage() {
 
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">
             <ScrambleText text="Let's" delay={0} />
           </h1>
@@ -84,7 +83,11 @@ export default function ContactPage() {
               within 24 hours.
             </p>
             <div className="flex items-center gap-4">
-              <Link href={`mailto:${email}`}>
+              <Link
+                href={`mailto:${siteConfig.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button
                   className="gap-2 rounded-full px-6 hover:bg-muted-foreground"
                   size="lg"
@@ -93,7 +96,9 @@ export default function ContactPage() {
                   Email Me
                 </Button>
               </Link>
-              <span className="text-xs text-muted-foreground">{email}</span>
+              <span className="text-xs text-muted-foreground">
+                santanderfrancisbeam@gmail.com
+              </span>
             </div>
           </div>
         </div>

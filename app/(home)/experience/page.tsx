@@ -28,7 +28,7 @@ export default function ExperiencePage() {
 
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">{experience} of</h1>
           <h1>
             <ScrambleText text="Experience" delay={0} />
@@ -90,16 +90,15 @@ export default function ExperiencePage() {
                 <div className="flex items-center gap-3 relative">
                   {/* Timeline dot */}
                   <div className="hidden lg:flex absolute -left-[4.35rem] w-[7px] h-[7px] rounded-full bg-foreground ring-2 ring-background shrink-0" />
-
                   <Image
-                    className="rounded-lg ring-1 ring-border"
+                    className="w-11 h-11 rounded-lg ring-1 ring-border object-cover"
                     src={exp.img}
                     alt={exp.company_name}
                     width={44}
                     height={44}
                   />
                   <div>
-                    <h2 className="font-bold text-base leading-tight">
+                    <h2 className="font-bold text-base leading-tight font-geist">
                       {exp.company_name}
                     </h2>
                     <p className="text-xs text-muted-foreground mt-0.5">
@@ -112,7 +111,9 @@ export default function ExperiencePage() {
                   <p className="text-xs text-muted-foreground uppercase tracking-widest">
                     Role
                   </p>
-                  <p className="text-sm font-medium">{exp.position}</p>
+                  <p className="text-sm font-medium font-geist">
+                    {exp.position}
+                  </p>
                 </div>
 
                 {exp.employment_type && (

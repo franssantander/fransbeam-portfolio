@@ -45,7 +45,7 @@ export default function SkillsPage() {
       </div>
 
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">
             <ScrambleText text="Tech Stack" delay={0} />
           </h1>

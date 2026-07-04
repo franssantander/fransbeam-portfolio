@@ -14,7 +14,7 @@ export default function SkillsCard({ icon, name, hasVariant }: Skills) {
         variant={hasVariant ? (isDark ? "dark" : "light") : undefined}
       />
 
-      <span className="text-xs text-muted-foreground text-center leading-tight line-clamp-2">
+      <span className="text-xs text-muted-foreground text-center line-clamp-2 font-ibm">
         {name}
       </span>
     </div>

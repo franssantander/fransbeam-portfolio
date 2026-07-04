@@ -28,7 +28,9 @@ export default function ProjectCard({
             src={project.img}
             alt={project.project_name}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 176px, (max-width: 1024px) 208px, 240px"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            priority={index < 2}
           />
         </div>
 
@@ -54,7 +56,7 @@ export default function ProjectCard({
               ) : null}
             </div>
 
-            <h2 className="font-bold text-xl md:text-2xl leading-tight group-hover:text-muted-foreground transition-colors duration-200 truncate">
+            <h2 className="font-bold text-xl md:text-2xl leading-tight group-hover:text-muted-foreground transition-colors duration-200 truncate font-geist">
               {project.project_name}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 max-w-lg">

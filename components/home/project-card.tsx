@@ -28,7 +28,9 @@ export default function ProjectCard({
             src={project.img}
             alt={project.project_name}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 176px, (max-width: 1024px) 208px, 240px"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
+            priority={index < 2}
           />
         </div>
 

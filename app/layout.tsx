@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ScrollRestore } from "@/components/scroll-restore";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { siteConfig } from "@/config/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,39 +18,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const interSans = Inter({
+  variable: "--font-inter-sans",
+  subsets: ["latin"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://francissantander.com"),
-  title: {
-    default: "Francis Beam Santander - Full-Stack Engineer",
-    template: "%s | Francis Beam Santander",
-  },
-  description:
-    "Portfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
-  keywords: [
-    "Francis Beam Santander",
-    "Francis Santander",
-    "Frans Santander",
-    "Francis",
-    "Francis Beam",
-    "Santander",
-    "Full-Stack Software Engineer",
-    "Software Engineer Philippines",
-    "Full Stack Developer Philippines",
-    "Software Engineer",
-    "Software Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Laravel Developer",
-    "TypeScript Developer",
-    "UI UX Designer Philippines",
-  ],
+  metadataBase: new URL(siteConfig.url),
+
+  title: siteConfig.title,
+
+  description: siteConfig.description,
+
+  keywords: [...siteConfig.seo.keywords],
+
   authors: [
-    { name: "Francis Beam Santander", url: "https://francissantander.com" },
+    {
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   ],
-  creator: "Francis Beam Santander",
-  verification: {
-    google: "Lrk3FXegFvCIHvKIPTUhZWtOroE7x7SK_D7meyjXt-M",
-  },
+
+  creator: siteConfig.name,
+
+  verification: siteConfig.seo.verification,
+
   robots: {
     index: true,
     follow: true,
@@ -59,28 +58,31 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
+
   alternates: {
-    canonical: "https://francissantander.com",
+    canonical: siteConfig.url,
   },
+
   openGraph: {
-    title: "Francis Beam Santander - Full-Stack Engineer",
-    description:
-      "Portfolio of Francis Beam Santander, a Full-Stack Software Engineer and UI/UX enthusiast specializing in React, Next.js, TypeScript, and Laravel. Building scalable, user-centric web applications.",
-    url: "https://francissantander.com",
-    siteName: "Francis Beam Santander",
+    title: siteConfig.title.default,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     type: "website",
-    locale: "en_US",
+
     images: [
       {
-        url: "/og-image.png",
+        url: siteConfig.images.og,
         width: 1200,
         height: 630,
-        alt: "Francis Beam Santander - Full-Stack Engineer",
+        alt: siteConfig.title.default,
       },
     ],
   },
+
   icons: {
-    icon: "/favicon.ico",
+    icon: siteConfig.images.favicon,
   },
 };
 
@@ -99,33 +101,22 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Person",
-                name: "Francis Beam Santander",
-                alternateName: [
-                  "Francis Santander",
-                  "Frans Santander",
-                  "Francis Beam",
-                  "Santander",
-                  "Francis",
-                  "Frans",
-                ],
-                url: "https://francissantander.com",
-                jobTitle: "Full-Stack Software Engineer",
+                name: siteConfig.name,
+                alternateName: siteConfig.person.alternateNames,
+                url: siteConfig.url,
+                jobTitle: siteConfig.person.jobTitle,
                 address: {
                   "@type": "PostalAddress",
                   addressCountry: "PH",
                   addressRegion: "Philippines",
                 },
-                sameAs: [
-                  "https://www.linkedin.com/in/francebeam",
-                  "https://github.com/franssantander",
-                  "https://www.instagram.com/franss.dev",
-                ],
+                sameAs: Object.values(siteConfig.socials),
               }),
             }}
           />
         </head>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${interSans.variable} ${ibmPlexMono.variable} antialiased`}
         >
           <ThemeProvider
             attribute="class"
@@ -137,10 +128,10 @@ export default function RootLayout({
             <Navbar />
             <div>{children}</div>
           </ThemeProvider>
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
-      <Analytics />
-      <SpeedInsights />
     </>
   );
 }

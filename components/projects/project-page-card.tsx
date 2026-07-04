@@ -30,7 +30,7 @@ export default function ProjectPageCard({
       viewport={{ once: true, margin: "-80px" }}
       transition={{
         duration: 0.55,
-        delay: index < 3 ? index * 0.1 : 0, 
+        delay: index < 3 ? index * 0.1 : 0,
         ease: [0.21, 0.47, 0.32, 0.98] as [number, number, number, number],
       }}
     >
@@ -48,7 +48,9 @@ export default function ProjectPageCard({
             src={project.img}
             alt={project.project_name}
             fill
+            sizes="(max-width: 1024px) 100vw, 60vw"
             className="object-cover"
+            priority={index < 2}
           />
         </motion.div>
       </Link>
@@ -80,7 +82,7 @@ export default function ProjectPageCard({
             ) : null}
           </div>
 
-          <h2 className="font-black text-2xl md:text-3xl leading-tight tracking-tight">
+          <h2 className="font-black text-2xl md:text-3xl leading-tight tracking-tight font-geist">
             {project.project_name}
           </h2>
 
@@ -114,7 +116,7 @@ export default function ProjectPageCard({
                           : undefined
                       }
                     />
-                    <span className="text-xs">{tech.name}</span>
+                    <span className="text-xs font-ibm">{tech.name}</span>
                   </Badge>
                 ),
               )}

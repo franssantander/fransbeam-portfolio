@@ -1,5 +1,6 @@
 "use client";
 import {
+  Badge,
   Button,
   Card,
   CardContent,
@@ -41,6 +42,7 @@ const CARDS = [
     backIcons: [PaintBoardFreeIcons, Layout06Icon],
   },
 ];
+
 
 function FlipCard({
   index,
@@ -144,12 +146,12 @@ function FlipCard({
               </CardTitle>
             </CardHeader>
             <CardContent className="pb-4 relative z-10 flex-1">
-              <h3 className="text-xl font-bold leading-snug uppercase pr-6">
+              <h3 className="text-xl font-bold leading-snug uppercase pr-6 font-geist">
                 {title}
               </h3>
             </CardContent>
             <CardFooter className="flex justify-between items-center relative">
-              <span className="text-xs text-muted-foreground tracking-widest uppercase">
+              <span className="text-xs text-muted-foreground tracking-widest uppercase font-ibm">
                 Look inside
               </span>
               <Button
@@ -205,13 +207,14 @@ function FlipCard({
                 {hook}
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground border border-border"
+                {tags.map((tag, index) => (
+                  <Badge
+                    key={index}
+                    className="text-xs font-ibm"
+                    variant="outline"
                   >
                     {tag}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </CardContent>
@@ -253,18 +256,18 @@ function RevealLine({
 
 export default function Hero() {
   return (
-    <div className="w-full space-y-16">
+    <div className="w-full space-y-10">
       <div className="space-y-5">
         <RevealLine delay={0}>
-          <div className="flex items-center gap-3">
-            <div className="h-px w-8 bg-foreground" />
-            <span className="text-xs text-muted-foreground uppercase tracking-widest">
-              Portfolio
-            </span>
-          </div>
+          <Badge
+            className="tracking-widest uppercase p-3 border-neutral-500 text-sm font-ibm"
+            variant="outline"
+          >
+            Portfolio
+          </Badge>
         </RevealLine>
 
-        <div className="uppercase font-black text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1] space-y-1">
+        <div className="uppercase font-black text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1] space-y-1 font-geist">
           <RevealLine delay={0.1}>
             <h1 className="text-muted-foreground">Full-Stack</h1>
           </RevealLine>
@@ -294,12 +297,12 @@ export default function Hero() {
 
       <div className="space-y-6">
         <RevealLine delay={0.6}>
-          <div className="flex items-center gap-3">
-            <div className="h-px w-8 bg-foreground" />
-            <h2 className="text-xs text-muted-foreground uppercase tracking-widest">
-              What I do
-            </h2>
-          </div>
+          <Badge
+            className="tracking-widest uppercase p-3 border-neutral-500 text-sm font-ibm"
+            variant="outline"
+          >
+            What I Do
+          </Badge>
         </RevealLine>
 
         <motion.div

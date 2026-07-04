@@ -1,6 +1,6 @@
 [
   {
-    "img": "/projects/1.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/renthaven.avif",
     "project_name": "RentHaven",
     "category": "Full-Stack",
     "description": "A modern real estate platform built for seamless property management and rental experiences.",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "img": "/projects/localpo.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/localpo.avif",
     "project_name": "Local Po (Online Job)",
     "category": "Full-Stack",
     "description": "A SaaS web application designed to streamline the job hiring process by connecting job seekers with employers efficiently.",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "img": "/projects/rjavancena.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/rjavancena.avif",
     "project_name": "RJ Avancena (POS)",
     "category": "Full-Stack",
     "description": "A comprehensive Inventory Management System and Point of Sale (POS) solution designed for managing sales, inventory, and users efficiently.",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "img": "/projects/rsvp.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/rsvp.avif",
     "project_name": "Birthday RSVP",
     "category": "Full-Stack",
     "description": "A freelance full-stack web app built for an 18th birthday celebration — featuring a digital invitation and RSVP system where guests can confirm attendance in real time, powered by Next.js and Supabase.",
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "img": "/projects/francisletters.png",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/francisletters.avif",
     "project_name": "Francis Letters (My Blog)",
     "category": "Frontend",
     "description": "A space for self reflection and documenting the journey: creating, experimenting, and learning along the way.",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "img": "/projects/frogman.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/frogman.avif",
     "project_name": "Frogman Merchant",
     "category": "Frontend",
     "description": "A seamless online shopping experience for customers while giving merchants full control over their store management.",
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "img": "/projects/basicclothing.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/basicclothing.avif",
     "project_name": "Basic Clothing E-Commerce",
     "category": "Frontend",
     "description": "Stylish e-commerce platform designed specifically for clothing and fashion brands. It offers a seamless shopping experience with a sleek, minimalist design that highlights the latest trends in apparel.",
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "img": "/projects/drumpad.jpg",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/drumpad.avif",
     "project_name": "Drum Pad",
     "category": "Frontend",
     "description": "An interactive music-making application designed for beatmakers, producers, and music enthusiasts. It provides an intuitive drum pad interface that allows users to create rhythms.",

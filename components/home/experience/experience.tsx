@@ -14,11 +14,9 @@ export default function Experience() {
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">{experience} of</h1>
-          <h1>
-            <ScrambleText text="Experience" delay={0} />
-          </h1>
+          <ScrambleText text="Experience" delay={0} />
         </div>
         <span className="text-muted-foreground text-sm tabular-nums mb-1">
           {ExperienceData.length} companies

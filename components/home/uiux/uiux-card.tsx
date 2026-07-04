@@ -13,6 +13,7 @@ export default function UiuxCard({ slug, img, project_name, category }: Uiux) {
             src={img}
             alt={project_name}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
@@ -23,7 +24,7 @@ export default function UiuxCard({ slug, img, project_name, category }: Uiux) {
             <p className="text-xs text-muted-foreground uppercase tracking-widest mb-0.5">
               {category}
             </p>
-            <h3 className="font-semibold text-sm leading-snug">
+            <h3 className="font-semibold text-sm leading-snug font-geist">
               {project_name}
             </h3>
           </div>

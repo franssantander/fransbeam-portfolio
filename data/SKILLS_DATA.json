@@ -154,5 +154,11 @@
     "name": "Linux",
     "category": "DevOps / Infrastructure",
     "hasVariant": true
+  },
+  {
+    "icon": "alibabacloud",
+    "name": "Alibaba Cloud",
+    "category": "DevOps / Infrastructure",
+    "hasVariant": true
   }
 ]

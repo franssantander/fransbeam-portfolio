@@ -7,7 +7,7 @@ export default function Uiux() {
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1">
+        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <h1 className="text-muted-foreground">
             <ScrambleText text="UI/UX" delay={0} />
           </h1>

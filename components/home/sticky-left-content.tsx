@@ -1,6 +1,4 @@
 "use client";
-
-import francisImage from "@/assets/francis-img.jpg";
 import Image from "next/image";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
@@ -55,7 +53,7 @@ export default function StickyLeftContent() {
     >
       <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full">
         <Image
-          src={francisImage}
+          src="https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-img.avif"
           alt="Francis Santander"
           fill
           priority
@@ -65,17 +63,17 @@ export default function StickyLeftContent() {
       </div>
 
       <div className="space-y-2">
-        <h1 className="text-2xl lg:text-3xl font-bold tracking-tight">
+        <h1 className="text-2xl lg:text-3xl font-bold tracking-tight font-geist">
           Francis Santander
         </h1>
-        <Badge variant="secondary" className="text-sm px-3 py-1">
+        <Badge variant="secondary" className="text-sm p-3 font-geist">
           Software Engineer
         </Badge>
       </div>
 
-      <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-        Building modern web and mobile applications with a sharp eye for detail
-        and a passion for great user experience.
+      <p className="text-muted-foreground text-sm leading-relaxed max-w-xs font-inter">
+        Building scalable web and mobile applications with a focus on clean
+        architecture, intuitive user experiences, and high-quality code.
       </p>
 
       {/* Divider */}

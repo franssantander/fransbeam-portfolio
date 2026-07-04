@@ -1,6 +1,6 @@
 [
   {
-    "img": "/experience/esdsilogo.webp",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/esdsilogo.avif",
     "company_name": "Elite Software and Data Security, Inc",
     "position": "Software Developer",
     "years_active": "July 2025 - Present",
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "img": "/experience/vqlogo.webp",
+    "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/vqlogo.avif",
     "company_name": "ViewQuest",
     "position": "Software Engineer",
     "years_active": "Oct 2023 - July 2025",
