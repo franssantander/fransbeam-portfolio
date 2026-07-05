@@ -8,7 +8,7 @@ export const siteConfig = {
   },
   email: "hello@francissantander.com",
   description:
-    "I'm Francis Santander — a Full-Stack Software Engineer and UI/UX Designer from the Philippines. I design and develop modern, scalable web applications that combine clean architecture with intuitive, user-centered experiences.",
+    "I'm Francis Santander — a Full-Stack Software Engineer and UI/UX Designer from the Philippines. I design and develop modern, scalable web and mobile applications.",
 
   url: "https://francissantander.com",
   ogImage: "/og-image.png",
