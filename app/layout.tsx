@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ScrollRestore } from "@/components/scroll-restore";
+import { LoadingScreen } from "@/components/loading-screen";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { siteConfig } from "@/config/site";
@@ -81,8 +82,31 @@ export const metadata: Metadata = {
     ],
   },
 
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title.default,
+    description: siteConfig.description,
+    images: [siteConfig.images.og],
+  },
+
   icons: {
-    icon: siteConfig.images.favicon,
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon-180x180.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+
+  manifest: "/manifest.json",
+
+  formatDetection: {
+    telephone: false,
   },
 };
 
@@ -104,6 +128,7 @@ export default function RootLayout({
                 name: siteConfig.name,
                 alternateName: siteConfig.person.alternateNames,
                 url: siteConfig.url,
+                image: siteConfig.person.image,
                 jobTitle: siteConfig.person.jobTitle,
                 address: {
                   "@type": "PostalAddress",
@@ -111,6 +136,18 @@ export default function RootLayout({
                   addressRegion: "Philippines",
                 },
                 sameAs: Object.values(siteConfig.socials),
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: siteConfig.name,
+                url: siteConfig.url,
+                description: siteConfig.description,
               }),
             }}
           />
@@ -124,6 +161,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <LoadingScreen />
             <ScrollRestore />
             <Navbar />
             <div>{children}</div>

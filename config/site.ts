@@ -42,6 +42,9 @@ export const siteConfig = {
   person: {
     jobTitle: "Full-Stack Software Engineer & UI/UX Designer",
 
+    image:
+      "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-img.avif",
+
     alternateNames: [
       "Francis Santander",
       "Frans Santander",
