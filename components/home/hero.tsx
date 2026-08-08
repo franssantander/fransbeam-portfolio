@@ -29,7 +29,7 @@ const CARDS = [
     title: "Web & Mobile Development",
     href: "/projects",
     hook: "I build fast, scalable, and production-ready applications from backend to frontend.",
-    tags: ["Next.js", "React Native", "Laravel", "MySQL"],
+    tags: ["Next.js", "Tailwind CSS", "React Native", "Laravel", "PostgreSQL"],
     backIcons: [CodeCircleIcon, SmartPhone01FreeIcons],
   },
   {
@@ -287,7 +287,9 @@ export default function Hero() {
 
       <div className="space-y-6">
         <RevealLine delay={0.6}>
-          <h1 className="uppercase font-mono leading-relaxed font-medium ">What I Do</h1>
+          <h1 className="uppercase font-mono leading-relaxed font-medium ">
+            What I Do
+          </h1>
         </RevealLine>
 
         <motion.div

@@ -42,6 +42,18 @@
     "hasVariant": true
   },
   {
+    "icon": "tanstack2",
+    "name": "TanStack",
+    "category": "Frontend Development",
+    "hasVariant": true
+  },
+  {
+    "icon": "redux",
+    "name": "Redux",
+    "category": "Frontend Development",
+    "hasVariant": true
+  },
+  {
     "icon": "mysql",
     "name": "MySql",
     "category": "Database",
@@ -110,36 +122,36 @@
   {
     "icon": "figma",
     "name": "Figma",
-    "category": "Design Tool & Productiviy",
+    "category": "Design Tool & CMS",
     "hasVariant": true
   },
   {
     "icon": "framer",
     "name": "Framer",
-    "category": "Design Tool & Productiviy",
+    "category": "Design Tool & CMS",
     "hasVariant": true
   },
   {
     "icon": "wordpress",
     "name": "WordPress",
-    "category": "Design Tool & Productiviy",
+    "category": "Design Tool & CMS",
     "hasVariant": true
   },
   {
     "icon": "webflow",
     "name": "Webflow",
-    "category": "Design Tool & Productiviy",
+    "category": "Design Tool & CMS",
     "hasVariant": true
   },
   {
     "icon": "notion",
     "name": "Notion",
-    "category": "Design Tool & Productiviy",
+    "category": "Design Tool & CMS",
     "hasVariant": true
   },
   {
     "icon": "claude",
-    "name": "Claude",
+    "name": "Claude Code",
     "category": "AI & Developer Tools",
     "hasVariant": true
   },
@@ -152,6 +164,12 @@
   {
     "icon": "cypress",
     "name": "Cypress",
+    "category": "AI & Developer Tools",
+    "hasVariant": true
+  },
+  {
+    "icon": "git",
+    "name": "Git",
     "category": "AI & Developer Tools",
     "hasVariant": true
   },

@@ -53,7 +53,7 @@ export default function Skills() {
           </h1>
         </div>
         <span className="text-muted-foreground text-sm tabular-nums mb-1">
-          <CountUp to={SkillsData.length} delay={0.2} /> tools
+          <CountUp to={SkillsData.length} delay={0.2} /> stacks
         </span>
       </div>
 

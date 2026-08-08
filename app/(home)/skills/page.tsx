@@ -60,7 +60,7 @@ export default function SkillsPage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.4 }}
         >
-          <CountUp to={SkillsData.length} delay={0.5} /> tools
+          <CountUp to={SkillsData.length} delay={0.5} /> stacks
         </motion.span>
       </div>
 
