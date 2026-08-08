@@ -43,7 +43,6 @@ const CARDS = [
   },
 ];
 
-
 function FlipCard({
   index,
   icon,
@@ -258,15 +257,6 @@ export default function Hero() {
   return (
     <div className="w-full space-y-10">
       <div className="space-y-5">
-        <RevealLine delay={0}>
-          <Badge
-            className="tracking-widest uppercase p-3 border-neutral-500 text-sm font-ibm"
-            variant="outline"
-          >
-            Portfolio
-          </Badge>
-        </RevealLine>
-
         <div className="uppercase font-black text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1] space-y-1 font-geist">
           <RevealLine delay={0.1}>
             <h1 className="text-muted-foreground">Full-Stack</h1>
@@ -297,12 +287,7 @@ export default function Hero() {
 
       <div className="space-y-6">
         <RevealLine delay={0.6}>
-          <Badge
-            className="tracking-widest uppercase p-3 border-neutral-500 text-sm font-ibm"
-            variant="outline"
-          >
-            What I Do
-          </Badge>
+          <h1 className="uppercase font-mono leading-relaxed font-medium ">What I Do</h1>
         </RevealLine>
 
         <motion.div

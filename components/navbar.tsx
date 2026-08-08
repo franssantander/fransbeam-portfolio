@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import DarkLogo from "../assets/frans-darklogo.svg";
-import WhiteLogo from "../assets/frans-whitelogo.svg";
+import DarkLogo from "../assets/fransdev-dark.svg";
+import WhiteLogo from "../assets/fransdev-light.svg";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Moon02Icon, Sun01FreeIcons } from "@hugeicons/core-free-icons";
 import {

@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import DarkLogo from "@/assets/frans-darklogo.svg";
-import WhiteLogo from "@/assets/frans-whitelogo.svg";
+import DarkLogo from "@/assets/fransdev-dark.svg";
+import WhiteLogo from "@/assets/fransdev-light.svg";
 import { useResolvedTheme } from "@/hooks/useResolvedTheme";
 import { siteConfig } from "@/config/site";
 

@@ -18,6 +18,12 @@
     "hasVariant": true
   },
   {
+    "icon": "nuxtjs",
+    "name": "Nuxt.js",
+    "category": "Frontend Development",
+    "hasVariant": true
+  },
+  {
     "icon": "angular",
     "name": "Angular",
     "category": "Frontend Development",
@@ -42,8 +48,8 @@
     "hasVariant": true
   },
   {
-    "icon": "mariadb",
-    "name": "MariaDB",
+    "icon": "postgresql",
+    "name": "PostgreSQL",
     "category": "Database",
     "hasVariant": true
   },
@@ -132,9 +138,21 @@
     "hasVariant": true
   },
   {
+    "icon": "claude",
+    "name": "Claude",
+    "category": "AI & Developer Tools",
+    "hasVariant": true
+  },
+  {
+    "icon": "openai",
+    "name": "OpenAI",
+    "category": "AI & Developer Tools",
+    "hasVariant": true
+  },
+  {
     "icon": "cypress",
     "name": "Cypress",
-    "category": "Test Automation",
+    "category": "AI & Developer Tools",
     "hasVariant": true
   },
   {
