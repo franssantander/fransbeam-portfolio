@@ -44,3 +44,17 @@ export interface Skills {
   category?: string;
   hasVariant: boolean;
 }
+
+export interface BlogPostMeta {
+  slug: string;
+  title: string;
+  subtitle: string;
+  excerpt: string;
+  date: string;
+  cover: string;
+  readingTime: number;
+}
+
+export interface BlogPost extends BlogPostMeta {
+  content: string;
+}

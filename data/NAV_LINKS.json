@@ -2,6 +2,7 @@
   { "label": "Home", "href": "/" },
   { "label": "Projects", "href": "/projects" },
   { "label": "Designs", "href": "/designs" },
+  { "label": "Letters", "href": "/letters" },
   { "label": "Experience", "href": "/experience" },
   { "label": "Skills", "href": "/skills" },
   { "label": "Contact", "href": "/contact" }

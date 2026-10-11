@@ -180,6 +180,12 @@
     "hasVariant": true
   },
   {
+    "icon": "redis",
+    "name": "Redis",
+    "category": "DevOps / Infrastructure",
+    "hasVariant": true
+  },
+  {
     "icon": "nginx",
     "name": "Nginx",
     "category": "DevOps / Infrastructure",

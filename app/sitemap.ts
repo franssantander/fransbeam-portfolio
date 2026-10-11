@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import UiuxData from "@/data/UIUX_DATA.json";
+import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -15,6 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${siteConfig.url}/designs`,
       changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${siteConfig.url}/letters`,
+      changeFrequency: "weekly" as const,
       priority: 0.8,
     },
     {
@@ -41,5 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...designRoutes];
+  const letterRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${siteConfig.url}/letters/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...designRoutes, ...letterRoutes];
 }

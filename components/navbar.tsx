@@ -117,65 +117,81 @@ export default function Navbar() {
             )}
           </Button>
 
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                size="sm"
-                variant="outline"
-                className="lg:hidden rounded-full text-xs px-4"
-              >
-                Menu
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-64 flex flex-col pt-14 px-6"
-            >
-              <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-              </SheetHeader>
-
-              <ul className="flex flex-col gap-1 mt-4">
-                {NavLinks.map(({ label, href }) => (
-                  <li key={label}>
-                    <SheetClose asChild>
-                      <Link
-                        href={href}
-                        className={`flex items-center justify-between text-sm font-medium px-3 py-2.5 rounded-md transition-colors duration-150
-                          ${
-                            isActive(href)
-                              ? "text-foreground bg-accent"
-                              : "text-muted-foreground hover:text-foreground hover:bg-accent"
-                          }`}
-                      >
-                        {label}
-                        {isActive(href) && (
-                          <span className="h-1.5 w-1.5 rounded-full bg-foreground shrink-0" />
-                        )}
-                      </Link>
-                    </SheetClose>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-auto border-t border-border pt-6 pb-2">
+          {/* Radix ids come from useId, which can drift during dev hydration;
+              render the Sheet client-only, with a look-alike button until mounted */}
+          {isMounted ? (
+            <Sheet>
+              <SheetTrigger asChild>
                 <Button
-                  variant="ghost"
-                  className="w-full justify-start gap-3 text-sm text-muted-foreground"
-                  onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                  size="sm"
+                  variant="outline"
+                  className="lg:hidden rounded-full text-xs px-4"
                 >
-                  {isMounted && (
-                    <HugeiconsIcon
-                      size={16}
-                      icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
-                    />
-                  )}
-                  {isMounted &&
-                    (theme === "light" ? "Dark mode" : "Light mode")}
+                  Menu
                 </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className="w-64 flex flex-col pt-14 px-6"
+              >
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+
+                <ul className="flex flex-col gap-1 mt-4">
+                  {NavLinks.map(({ label, href }) => (
+                    <li key={label}>
+                      <SheetClose asChild>
+                        <Link
+                          href={href}
+                          className={`flex items-center justify-between text-sm font-medium px-3 py-2.5 rounded-md transition-colors duration-150
+                            ${
+                              isActive(href)
+                                ? "text-foreground bg-accent"
+                                : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                            }`}
+                        >
+                          {label}
+                          {isActive(href) && (
+                            <span className="h-1.5 w-1.5 rounded-full bg-foreground shrink-0" />
+                          )}
+                        </Link>
+                      </SheetClose>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto border-t border-border pt-6 pb-2">
+                  <Button
+                    variant="ghost"
+                    className="w-full justify-start gap-3 text-sm text-muted-foreground"
+                    onClick={() =>
+                      setTheme(theme === "light" ? "dark" : "light")
+                    }
+                  >
+                    {isMounted && (
+                      <HugeiconsIcon
+                        size={16}
+                        icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
+                      />
+                    )}
+                    {isMounted &&
+                      (theme === "light" ? "Dark mode" : "Light mode")}
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          ) : (
+            <Button
+              size="sm"
+              variant="outline"
+              className="lg:hidden rounded-full text-xs px-4"
+              tabIndex={-1}
+              aria-hidden
+            >
+              Menu
+            </Button>
+          )}
         </div>
       </div>
     </nav>
