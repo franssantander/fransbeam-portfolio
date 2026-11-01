@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Francis Beam Santander",
   shortName: "Francis Santander",
   title: {
-    default: "Francis Santander — Software Engineer & Founder of Medasin",
+    default: "Francis Santander — Software Engineer & Founder",
     template: "%s | Francis Santander",
   },
   email: "hello@francissantander.com",
