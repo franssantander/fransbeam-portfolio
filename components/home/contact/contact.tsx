@@ -1,19 +1,18 @@
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Mail01FreeIcons } from "@hugeicons/core-free-icons";
+import { MailIcon } from "lucide-react";
 import Link from "next/link";
 import { Badge, Button } from "@/components/ui";
 import Footer from "@/components/footer";
 import Socials from "./socials";
-import { siteConfig } from "@/config/site";
+import { projectInquiryHref, siteConfig } from "@/config/site";
 
 export default function Contact() {
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
-          <h1 className="text-muted-foreground">Let&apos;s</h1>
-          <h1>Work Together</h1>
-        </div>
+        <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+          <span className="block text-muted-foreground">Let&apos;s</span>
+          <span className="block">Work Together</span>
+        </h2>
       </div>
 
       <div className="flex flex-col divide-y divide-border">
@@ -24,17 +23,21 @@ export default function Contact() {
             </p>
           </div>
           <div className="flex-1 flex flex-wrap gap-2">
-            {["Full-time roles", "Freelance projects", "Collaborations"].map(
-              (item, index) => (
-                <Badge
-                  key={index}
-                  className="p-3 text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
-                  variant="outline"
-                >
-                  {item}
-                </Badge>
-              ),
-            )}
+            {[
+              "Product builds",
+              "Business web apps",
+              "UI/UX design",
+              "Full-time roles",
+              "Partnerships",
+            ].map((item, index) => (
+              <Badge
+                key={index}
+                className="p-3 text-muted-foreground hover:text-foreground hover:border-foreground transition-colors"
+                variant="outline"
+              >
+                {item}
+              </Badge>
+            ))}
           </div>
         </div>
 
@@ -58,21 +61,17 @@ export default function Contact() {
             </p>
           </div>
           <div className="flex-1 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <Link
-              href={`mailto:${siteConfig.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={projectInquiryHref}>
               <Button
                 className="gap-2 rounded-full px-4 hover:bg-muted-foreground"
                 size="lg"
               >
-                <HugeiconsIcon icon={Mail01FreeIcons} size={18} />
-                Email Me
+                <MailIcon size={18} />
+                Start a project
               </Button>
             </Link>
             <span className="text-xs text-muted-foreground">
-              santanderfrancisbeam@gmail.com
+              {siteConfig.email}
             </span>
           </div>
         </div>

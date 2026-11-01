@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowUpRight03Icon } from "@hugeicons/core-free-icons";
+import { ArrowUpRightIcon } from "lucide-react";
 import { Uiux } from "@/interfaces";
 
 export default function UiuxCard({ slug, img, project_name, category }: Uiux) {
@@ -28,8 +27,7 @@ export default function UiuxCard({ slug, img, project_name, category }: Uiux) {
               {project_name}
             </h3>
           </div>
-          <HugeiconsIcon
-            icon={ArrowUpRight03Icon}
+          <ArrowUpRightIcon
             size={18}
             className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0 mt-0.5"
           />

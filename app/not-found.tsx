@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
+import { ChevronLeftIcon } from "lucide-react";
 
 function RevealLine({
   children,
@@ -87,7 +86,7 @@ export default function NotFound() {
               href="/"
               className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
             >
-              <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+              <ChevronLeftIcon size={16} />
               Back to home
             </Link>
 

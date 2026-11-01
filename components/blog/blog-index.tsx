@@ -2,12 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  ArrowLeft01FreeIcons,
-  GridViewIcon,
-  LeftToRightListBulletIcon,
-} from "@hugeicons/core-free-icons";
+import { ChevronLeftIcon, LayoutGridIcon, ListIcon } from "lucide-react";
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { BlogPostMeta } from "@/interfaces";
@@ -18,8 +13,8 @@ import BlogGridCard from "./blog-grid-card";
 type View = "list" | "grid";
 
 const VIEWS = [
-  { id: "list", label: "List view", icon: LeftToRightListBulletIcon },
-  { id: "grid", label: "Grid view", icon: GridViewIcon },
+  { id: "list", label: "List view", icon: ListIcon },
+  { id: "grid", label: "Grid view", icon: LayoutGridIcon },
 ] as const;
 
 const itemVariants = {
@@ -44,7 +39,7 @@ export default function BlogIndex({ posts }: { posts: BlogPostMeta[] }) {
           href="/"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
         >
-          <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+          <ChevronLeftIcon size={16} />
           Back to home
         </Link>
       </div>
@@ -67,7 +62,7 @@ export default function BlogIndex({ posts }: { posts: BlogPostMeta[] }) {
         </div>
 
         <div className="flex shrink-0 items-center gap-0.5 rounded-lg border border-border p-0.5">
-          {VIEWS.map(({ id, label, icon }) => (
+          {VIEWS.map(({ id, label, icon: Icon }) => (
             <Button
               key={id}
               size="icon-sm"
@@ -80,7 +75,7 @@ export default function BlogIndex({ posts }: { posts: BlogPostMeta[] }) {
                 view === id && "bg-muted text-foreground",
               )}
             >
-              <HugeiconsIcon icon={icon} size={16} />
+              <Icon size={16} />
             </Button>
           ))}
         </div>

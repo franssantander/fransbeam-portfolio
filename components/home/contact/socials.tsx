@@ -5,13 +5,12 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui";
+import { FileDownIcon } from "lucide-react";
 import {
-  Github01FreeIcons,
-  Linkedin02FreeIcons,
-  Instagram,
-  FileDownloadFreeIcons,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from "@/components/icons/brand-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -20,25 +19,25 @@ export default function Socials() {
     {
       label: "GitHub",
       href: "https://github.com/franssantander",
-      icon: Github01FreeIcons,
+      icon: GithubIcon,
       download: false,
     },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/francebeam/",
-      icon: Linkedin02FreeIcons,
+      icon: LinkedinIcon,
       download: false,
     },
     {
       label: "Instagram",
       href: "https://www.instagram.com/franss.dev/",
-      icon: Instagram,
+      icon: InstagramIcon,
       download: false,
     },
     {
       label: "Download CV",
       href: process.env.NEXT_PUBLIC_RESUME_URL || "",
-      icon: FileDownloadFreeIcons,
+      icon: FileDownIcon,
       download: true,
     },
   ];
@@ -46,7 +45,7 @@ export default function Socials() {
   return (
     <TooltipProvider delayDuration={100}>
       <div className="flex items-center gap-5">
-        {SOCIALS.map(({ label, href, icon, download }) => (
+        {SOCIALS.map(({ label, href, icon: Icon, download }) => (
           <Tooltip key={label}>
             <TooltipTrigger asChild>
               <motion.div
@@ -64,7 +63,7 @@ export default function Socials() {
                   download={download || undefined}
                   className="text-muted-foreground hover:text-foreground transition-colors block"
                 >
-                  <HugeiconsIcon icon={icon} size={20} />
+                  <Icon size={20} />
                 </Link>
               </motion.div>
             </TooltipTrigger>

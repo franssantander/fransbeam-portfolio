@@ -1,10 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  ArrowUpRight03Icon,
-  Github01FreeIcons,
-} from "@hugeicons/core-free-icons";
+import { ArrowUpRightIcon } from "lucide-react";
+import { GithubIcon } from "@/components/icons/brand-icons";
 import { Project } from "@/interfaces";
 
 export default function ProjectCard({
@@ -50,7 +47,7 @@ export default function ProjectCard({
                 </span>
               ) : project.github ? (
                 <span className="text-xs text-muted-foreground flex items-center gap-1 font-semibold">
-                  <HugeiconsIcon icon={Github01FreeIcons} size={12} />
+                  <GithubIcon size={12} />
                   Source only
                 </span>
               ) : null}
@@ -67,17 +64,9 @@ export default function ProjectCard({
 
         <div className="shrink-0 self-center opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200">
           {isLive ? (
-            <HugeiconsIcon
-              icon={ArrowUpRight03Icon}
-              size={20}
-              className="text-muted-foreground"
-            />
+            <ArrowUpRightIcon size={20} className="text-muted-foreground" />
           ) : (
-            <HugeiconsIcon
-              icon={Github01FreeIcons}
-              size={20}
-              className="text-muted-foreground"
-            />
+            <GithubIcon size={20} className="text-muted-foreground" />
           )}
         </div>
       </div>

@@ -2,8 +2,7 @@
 import UiuxData from "@/data/UIUX_DATA.json";
 import Image from "next/image";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
+import { ChevronLeftIcon } from "lucide-react";
 import { notFound, useParams } from "next/navigation";
 import {
   Badge,
@@ -27,7 +26,7 @@ export default function Page() {
         href="/designs"
         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
       >
-        <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+        <ChevronLeftIcon size={16} />
         Back to designs
       </Link>
 
@@ -244,7 +243,7 @@ export default function Page() {
             href="/designs"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+            <ChevronLeftIcon size={16} />
             All Designs
           </Link>
           <p className="text-xs text-muted-foreground">

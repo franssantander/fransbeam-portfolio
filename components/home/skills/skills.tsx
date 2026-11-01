@@ -44,14 +44,14 @@ export default function Skills() {
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
-          <h1 className="text-muted-foreground">
-            <ScrambleText text="Tech Stack" delay={0} />
-          </h1>
-          <h1>
-            <ScrambleText text="& Tools" delay={0.1} />
-          </h1>
-        </div>
+        <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+          <span className="block text-muted-foreground">
+            <ScrambleText text="Stack &" delay={0} />
+          </span>
+          <span className="block">
+            <ScrambleText text="Capabilities" delay={0.1} />
+          </span>
+        </h2>
         <span className="text-muted-foreground text-sm tabular-nums mb-1">
           <CountUp to={SkillsData.length} delay={0.2} /> stacks
         </span>

@@ -1,11 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  ArrowUpRight03Icon,
-  Github01FreeIcons,
-} from "@hugeicons/core-free-icons";
+import { ArrowUpRightIcon } from "lucide-react";
+import { GithubIcon } from "@/components/icons/brand-icons";
 import { Project } from "@/interfaces";
 import StackIcon from "tech-stack-icons";
 import { useResolvedTheme } from "@/hooks/useResolvedTheme";
@@ -76,7 +73,7 @@ export default function ProjectPageCard({
               </span>
             ) : project.github ? (
               <span className="text-xs text-muted-foreground flex items-center gap-1">
-                <HugeiconsIcon icon={Github01FreeIcons} size={12} />
+                <GithubIcon size={12} />
                 Source only
               </span>
             ) : null}
@@ -129,7 +126,7 @@ export default function ProjectPageCard({
           {isLive && (
             <Link href={project.link} target="_blank">
               <Button size="sm" className="gap-2 rounded-full px-5">
-                <HugeiconsIcon icon={ArrowUpRight03Icon} size={15} />
+                <ArrowUpRightIcon size={15} />
                 View Live
               </Button>
             </Link>
@@ -141,7 +138,7 @@ export default function ProjectPageCard({
                 variant="outline"
                 className="gap-2 rounded-full px-5"
               >
-                <HugeiconsIcon icon={Github01FreeIcons} size={15} />
+                <GithubIcon size={15} />
                 View Source
               </Button>
             </Link>
