@@ -5,8 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DarkLogo from "../assets/fransdev-dark.svg";
 import WhiteLogo from "../assets/fransdev-light.svg";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { Moon02Icon, Sun01FreeIcons } from "@hugeicons/core-free-icons";
+import { MoonIcon, SunIcon } from "lucide-react";
 import {
   Button,
   Sheet,
@@ -67,11 +66,6 @@ export default function Navbar() {
                       width={36}
                       height={36}
                       loading="eager"
-                      className={
-                        isDark
-                          ? "drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]"
-                          : "drop-shadow-[0_0_10px_rgba(0,0,0,0.3)]"
-                      }
                     />
                   </motion.div>
                 </AnimatePresence>
@@ -109,12 +103,12 @@ export default function Navbar() {
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="rounded-full"
           >
-            {isMounted && (
-              <HugeiconsIcon
-                size={18}
-                icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
-              />
-            )}
+            {isMounted &&
+              (theme === "light" ? (
+                <MoonIcon size={18} />
+              ) : (
+                <SunIcon size={18} />
+              ))}
           </Button>
 
           {/* Radix ids come from useId, which can drift during dev hydration;
@@ -169,12 +163,12 @@ export default function Navbar() {
                       setTheme(theme === "light" ? "dark" : "light")
                     }
                   >
-                    {isMounted && (
-                      <HugeiconsIcon
-                        size={16}
-                        icon={theme === "light" ? Moon02Icon : Sun01FreeIcons}
-                      />
-                    )}
+                    {isMounted &&
+                      (theme === "light" ? (
+                        <MoonIcon size={16} />
+                      ) : (
+                        <SunIcon size={16} />
+                      ))}
                     {isMounted &&
                       (theme === "light" ? "Dark mode" : "Light mode")}
                   </Button>

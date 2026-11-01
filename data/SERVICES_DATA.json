@@ -1,0 +1,20 @@
+[
+  {
+    "index": "01",
+    "icon": "product",
+    "title": "Full-Stack Product Engineering",
+    "audience": "For founders & startups",
+    "hook": "From idea to a launched web or mobile product — scoped, designed, and built end to end.",
+    "tags": ["Next.js", "React Native", "Laravel", "PostgreSQL"],
+    "href": "/projects"
+  },
+  {
+    "index": "02",
+    "icon": "design",
+    "title": "UI/UX & Product Design",
+    "audience": "For product teams",
+    "hook": "Clean, intuitive interfaces designed in Figma and ready for development.",
+    "tags": ["Figma", "Wireframing", "Prototyping", "Design Systems"],
+    "href": "/designs"
+  }
+]

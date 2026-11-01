@@ -7,10 +7,12 @@ import { cn } from "@/lib/utils";
 const SECTIONS = [
   { id: "hero", label: "Home" },
   { id: "projects", label: "Projects" },
-  { id: "uiux", label: "UI/UX" },
-  { id: "letters", label: "Letters" },
+  { id: "why-me", label: "Why Me" },
+  { id: "process", label: "How I Work" },
   { id: "experience", label: "Experience" },
+  { id: "uiux", label: "UI/UX" },
   { id: "skills", label: "Skills" },
+  { id: "letters", label: "Letters" },
   { id: "contact", label: "Contact" },
 ];
 

@@ -1,6 +1,8 @@
 import StickyLeftContent from "@/components/home/sticky-left-content";
 import Hero from "@/components/home/hero";
 import Project from "@/components/home/projects/project";
+import Principles from "@/components/home/principles/principles";
+import Process from "@/components/home/process/process";
 import Uiux from "@/components/home/uiux/uiux";
 import Blog from "@/components/home/blog/blog";
 import Experience from "@/components/home/experience/experience";
@@ -31,9 +33,14 @@ export default function HomePage() {
               <Uiux />
             </FadeUp>
           </div>
-          <div id="letters" className="scroll-mt-24">
+          <div id="why-me" className="scroll-mt-24">
             <FadeUp inView delay={0.1}>
-              <Blog />
+              <Principles />
+            </FadeUp>
+          </div>
+          <div id="process" className="scroll-mt-24">
+            <FadeUp inView delay={0.1}>
+              <Process />
             </FadeUp>
           </div>
           <div id="experience" className="scroll-mt-24">
@@ -44,6 +51,11 @@ export default function HomePage() {
           <div id="skills" className="scroll-mt-24">
             <FadeUp inView delay={0.1}>
               <Skills />
+            </FadeUp>
+          </div>
+          <div id="letters" className="scroll-mt-24">
+            <FadeUp inView delay={0.1}>
+              <Blog />
             </FadeUp>
           </div>
           <div id="contact" className="scroll-mt-24">

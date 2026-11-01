@@ -14,14 +14,20 @@ export default function Experience() {
   return (
     <section className="w-full">
       <div className="flex items-end justify-between mb-10">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
-          <h1 className="text-muted-foreground">{experience} of</h1>
+        <h2 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+          <span className="block text-muted-foreground">{experience} of</span>
           <ScrambleText text="Experience" delay={0} />
-        </div>
+        </h2>
         <span className="text-muted-foreground text-sm tabular-nums mb-1">
           {ExperienceData.length} companies
         </span>
       </div>
+
+      <p className="text-sm text-muted-foreground leading-relaxed max-w-xl -mt-4 mb-10">
+        Where I&apos;ve learned the most: building real software with great
+        teams who taught me to ship carefully, ask good questions, and own it
+        when things break.
+      </p>
 
       {/* Timeline container */}
       <div className="relative" ref={lineRef}>

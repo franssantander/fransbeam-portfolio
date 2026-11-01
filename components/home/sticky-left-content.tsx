@@ -1,14 +1,16 @@
 "use client";
 import Image from "next/image";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { ArrowUpRightIcon, FileDownIcon, MailIcon } from "lucide-react";
 import {
-  FileDownloadFreeIcons,
-  Github01FreeIcons,
-  Instagram,
-  Linkedin02FreeIcons,
-} from "@hugeicons/core-free-icons";
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from "@/components/icons/brand-icons";
 import Link from "next/link";
-import { Badge } from "../ui";
+import MedasinDark from "@/assets/medasin-dark.png";
+import MedasinLight from "@/assets/medasin-light.png";
+import { Badge, Button } from "../ui";
+import { projectInquiryHref, siteConfig } from "@/config/site";
 import { FadeUp } from "../animations/fade-up";
 import { motion } from "framer-motion";
 import {
@@ -22,25 +24,25 @@ const SOCIALS = [
   {
     label: "GitHub",
     href: "https://github.com/franssantander",
-    icon: Github01FreeIcons,
+    icon: GithubIcon,
     download: false,
   },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/francebeam/",
-    icon: Linkedin02FreeIcons,
+    icon: LinkedinIcon,
     download: false,
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/franss.dev/",
-    icon: Instagram,
+    icon: InstagramIcon,
     download: false,
   },
   {
     label: "Download CV",
     href: process.env.NEXT_PUBLIC_RESUME_URL || "",
-    icon: FileDownloadFreeIcons,
+    icon: FileDownIcon,
     download: true,
   },
 ];
@@ -67,14 +69,59 @@ export default function StickyLeftContent() {
           Francis Santander
         </h1>
         <Badge variant="secondary" className="text-sm p-3 font-geist">
-          Software Engineer
+          Software Engineer &amp; Founder
         </Badge>
+        <p className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
+          Founder of
+          <Link
+            href={siteConfig.venture.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 font-medium text-foreground hover:text-muted-foreground transition-colors"
+          >
+            {/* Both rendered; the `dark` class picks one, so no flash before mount */}
+            <Image
+              src={MedasinDark}
+              alt=""
+              width={16}
+              height={16}
+              className="size-4 shrink-0 rounded-[4px] dark:hidden"
+            />
+            <Image
+              src={MedasinLight}
+              alt=""
+              width={16}
+              height={16}
+              className="size-4 shrink-0 rounded-[4px] hidden dark:block"
+            />
+            {siteConfig.venture.name}
+            <ArrowUpRightIcon size={14} />
+          </Link>
+        </p>
       </div>
 
       <p className="text-muted-foreground text-sm leading-relaxed max-w-xs font-inter">
-        Building scalable web and mobile applications with a focus on clean
-        architecture, intuitive user experiences, and high-quality code.
+        Design and engineering are my jam. I love taking a rough idea, shaping
+        how it looks and feels, and building it into something real that people
+        use.
       </p>
+
+      {/* Availability + primary CTA */}
+      <div className="flex flex-col items-center gap-3">
+        <span className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+          </span>
+          Available for projects &amp; roles
+        </span>
+        <Link href={projectInquiryHref}>
+          <Button className="gap-2 rounded-full px-6" size="lg">
+            <MailIcon size={18} />
+            Start a project
+          </Button>
+        </Link>
+      </div>
 
       {/* Divider */}
       <div className="w-full border-t border-border" />
@@ -82,7 +129,7 @@ export default function StickyLeftContent() {
       {/* Social links */}
       <TooltipProvider delayDuration={100}>
         <div className="flex items-center gap-5">
-          {SOCIALS.map(({ label, href, icon, download }) => (
+          {SOCIALS.map(({ label, href, icon: Icon, download }) => (
             <Tooltip key={label}>
               <TooltipTrigger asChild>
                 <motion.div
@@ -96,7 +143,7 @@ export default function StickyLeftContent() {
                     download={download || undefined}
                     className="text-muted-foreground hover:text-foreground transition-colors block"
                   >
-                    <HugeiconsIcon icon={icon} size={22} />
+                    <Icon size={22} />
                   </Link>
                 </motion.div>
               </TooltipTrigger>

@@ -1,0 +1,18 @@
+[
+  {
+    "step": "Discover",
+    "description": "We clarify the problem, the users, and what success looks like before any code is written."
+  },
+  {
+    "step": "Design",
+    "description": "Flows and interfaces are designed in Figma, so you see the product before it's built."
+  },
+  {
+    "step": "Build",
+    "description": "Development happens in short iterations with regular demos, keeping you in the loop at every step."
+  },
+  {
+    "step": "Launch & Support",
+    "description": "Deployment, handover, and documentation — plus support as the product grows."
+  }
+]
