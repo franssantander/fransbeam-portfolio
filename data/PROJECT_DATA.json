@@ -1,5 +1,115 @@
 [
   {
+    "img": "",
+    "project_name": "Medasin",
+    "category": "SaaS · Productivity",
+    "status": "Live",
+    "role": "Founder · Product · Design · Engineering",
+    "tagline": "A connected system for a thoughtful life.",
+    "headline": "The PARA method for your second brain.",
+    "lede": "Sort your life into Projects, Areas, and Resources. Then plan the work on a board, do it in a focus session, and write down how it went. Everything stays linked.",
+    "visual": "medasin-brain",
+    "description": "Ideas, tasks, and files scatter across too many apps. Medasin brings them into one workspace built on the PARA method — Projects, Areas, Resources, and Archives — so planning, focused work, reflection, and notes stay linked.",
+    "highlights": [
+      "PARA workspace — every project, note, and file in one place",
+      "Linked workflow: board task → focus session → journal entry",
+      "Habits, plans, and reminders alongside the work itself",
+      "Encrypted Vault for sensitive records, encrypted on-device"
+    ],
+    "techstack": [
+      { "icon": "nextjs2", "name": "Next.js", "hasVariant": true },
+      { "icon": "typescript", "name": "TypeScript", "hasVariant": true },
+      { "icon": "tailwindcss", "name": "Tailwind CSS", "hasVariant": true },
+      { "icon": "laravel", "name": "Laravel", "hasVariant": true },
+      { "icon": "php", "name": "PHP", "hasVariant": true }
+    ],
+    "case_study": {
+      "problem": "Ideas, tasks, and files scatter across too many apps. Plans live in one tool, notes in another, and what actually got done rarely gets written down — so nothing connects, and it's hard to know where anything lives.",
+      "built": "Medasin is one workspace built on the PARA method. Every project, note, and file has one home, and the work itself stays linked: pull a board task into a focus session, and your reflection becomes a journal entry — nothing copied by hand.",
+      "para": [
+        {
+          "name": "Projects",
+          "icon": "target",
+          "summary": "Work with a finish line.",
+          "examples": [
+            "Spring newsletter",
+            "Move apartments",
+            "Kyoto trip in April"
+          ]
+        },
+        {
+          "name": "Areas",
+          "icon": "shapes",
+          "summary": "Parts of life you keep up.",
+          "examples": ["Health and fitness", "Writing", "Home and family"]
+        },
+        {
+          "name": "Resources",
+          "icon": "library",
+          "summary": "Things worth keeping.",
+          "examples": ["Book highlights", "Recipe PDFs", "Design references"]
+        },
+        {
+          "name": "Archives",
+          "icon": "archive",
+          "summary": "Done, but not gone.",
+          "examples": [
+            "Winter newsletter",
+            "Old job handover",
+            "Last year's goals"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "label": "Board task",
+          "value": "Draft the opening essay"
+        },
+        {
+          "label": "Focus session",
+          "value": "25 minutes, linked to the task"
+        },
+        {
+          "label": "Reflection",
+          "value": "Mood and a short note"
+        },
+        {
+          "label": "Journal",
+          "value": "Saved as an entry for the day"
+        }
+      ],
+      "features": [
+        {
+          "icon": "workspace",
+          "title": "PARA workspace",
+          "body": "Every project, note, and file in one place."
+        },
+        {
+          "icon": "workflow",
+          "title": "Linked workflow",
+          "body": "Board task → focus session → journal entry."
+        },
+        {
+          "icon": "plans",
+          "title": "Habits & plans",
+          "body": "Habits, plans, and reminders alongside the work itself."
+        },
+        {
+          "icon": "vault",
+          "title": "Encrypted Vault",
+          "body": "Sensitive records, encrypted on-device."
+        }
+      ]
+    },
+    "link": "https://medasin.app/",
+    "github": "",
+    "cta": {
+      "label": "Get started free",
+      "href": "https://medasin.app/"
+    }
+  },
+  {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/renthaven.avif",
     "project_name": "RentHaven",
     "category": "Full-Stack",
@@ -15,6 +125,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/localpo.avif",
     "project_name": "Local Po (Online Job)",
     "category": "Full-Stack",
@@ -30,6 +141,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/rjavancena.avif",
     "project_name": "RJ Avancena (POS)",
     "category": "Full-Stack",
@@ -45,6 +157,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/rsvp.avif",
     "project_name": "Birthday RSVP",
     "category": "Full-Stack",
@@ -59,6 +172,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/francisletters.avif",
     "project_name": "Francis Letters (My Blog)",
     "category": "Frontend",
@@ -72,6 +186,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/frogman.avif",
     "project_name": "Frogman Merchant",
     "category": "Frontend",
@@ -85,6 +200,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/basicclothing.avif",
     "project_name": "Basic Clothing E-Commerce",
     "category": "Frontend",
@@ -98,6 +214,7 @@
     ]
   },
   {
+    "hidden": true,
     "img": "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/projects/drumpad.avif",
     "project_name": "Drum Pad",
     "category": "Frontend",

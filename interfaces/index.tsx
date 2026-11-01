@@ -1,3 +1,11 @@
+export interface CaseStudy {
+  problem: string;
+  built: string;
+  para: { name: string; icon: string; summary: string; examples: string[] }[];
+  flow: { label: string; value: string }[];
+  features: { icon: string; title: string; body: string }[];
+}
+
 export interface Project {
   img: string;
   project_name: string;
@@ -6,6 +14,26 @@ export interface Project {
   description: string;
   link: string;
   techstack?: { icon: string; name: string; hasVariant: boolean }[];
+  hidden?: boolean;
+  status?: string;
+  role?: string;
+  tagline?: string;
+  headline?: string;
+  lede?: string;
+  visual?: string;
+  highlights?: string[];
+  cta?: { label: string; href: string };
+  case_study?: CaseStudy;
+}
+
+export interface Service {
+  index: string;
+  icon: string;
+  title: string;
+  audience: string;
+  hook: string;
+  tags: string[];
+  href: string;
 }
 
 export interface UiuxImages {
