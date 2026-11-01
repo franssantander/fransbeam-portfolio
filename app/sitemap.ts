@@ -5,6 +5,12 @@ import { getAllPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+  const posts = getAllPosts();
+  // Newest letter date, so /letters' lastmod changes only when a letter is added
+  const lettersModified = posts.reduce<Date | undefined>((latest, post) => {
+    const date = new Date(post.date);
+    return !latest || date > latest ? date : latest;
+  }, undefined);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: siteConfig.url, changeFrequency: "monthly" as const, priority: 1 },
@@ -20,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${siteConfig.url}/letters`,
+      lastModified: lettersModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     },
@@ -38,7 +45,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.6,
     },
-  ].map((route) => ({ ...route, lastModified }));
+  ].map((route) => ({
+    ...route,
+    lastModified: route.lastModified ?? lastModified,
+  }));
 
   const designRoutes: MetadataRoute.Sitemap = UiuxData.map((project) => ({
     url: `${siteConfig.url}/designs/${project.slug}`,
@@ -47,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const letterRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+  const letterRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${siteConfig.url}/letters/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,

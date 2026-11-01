@@ -1,30 +1,21 @@
 import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  // Keep the root title template so letter pages get "<title> | Francis Santander"
-  title: { default: "Letters", template: siteConfig.title.template },
+export const metadata: Metadata = pageMetadata({
+  title: "Letters",
   description:
-    "Letters on Stoicism, philosophy, and the craft of building things by Francis Santander.",
+    "Personal reflections on Stoicism, clear thinking, and living well by Francis Santander — written as letters, mostly to myself.",
+  path: "/letters",
   keywords: [
     "Francis Santander Letters",
     "Stoicism Essays",
     "Philosophy Writing",
     "Stoic Reflections",
-    "Software Engineering Essays",
-    "Building Things",
+    "Clear Thinking",
+    "Living Well",
+    "Personal Letters",
   ],
-  alternates: {
-    canonical: "https://francissantander.com/letters",
-  },
-  openGraph: {
-    title: "Letters | Francis Beam Santander",
-    description:
-      "Letters on Stoicism, philosophy, and the craft of building things by Francis Santander.",
-    url: "https://francissantander.com/letters",
-    type: "website",
-  },
-};
+});
 
 export default function RootLayout({
   children,

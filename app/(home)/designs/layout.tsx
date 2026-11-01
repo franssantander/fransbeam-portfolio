@@ -1,29 +1,22 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "UI/UX Designs",
   description:
-    "Explore my UI/UX design portfolio. A showcase of modern, clean user interfaces and intuitive digital experiences focused on visual clarity and usability.",
+    "UI/UX and product design by Francis Santander — interface and brand-led work, from landing pages to product UI, shaped around each business's audience and goals.",
+  path: "/designs",
   keywords: [
     "Francis Santander Designs",
     "UI/UX Design Portfolio",
     "User Interface Design",
     "User Experience Case Studies",
-    "Product Design Frameworks",
-    "Web Design Concepts",
-    "Clean Minimalist UI",
+    "Product Design",
+    "Landing Page Design",
+    "Figma UI Design",
+    "UI UX Designer Philippines",
   ],
-  alternates: {
-    canonical: "https://francissantander.com/designs",
-  },
-  openGraph: {
-    title: "UI/UX Designs | Francis Beam Santander",
-    description:
-      "Explore my UI/UX design portfolio. A showcase of modern, clean user interfaces and intuitive digital experiences focused on visual clarity and usability.",
-    url: "https://francissantander.com/designs",
-    type: "website",
-  },
-};
+});
 
 export default function RootLayout({
   children,

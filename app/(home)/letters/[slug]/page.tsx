@@ -4,14 +4,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
+import { ChevronLeftIcon } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui";
 import { FadeUp } from "@/components/animations/fade-up";
 import RevealLine from "@/components/animations/reveal-line";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import { formatFullDate } from "@/utils/formatPostDate";
 import { siteConfig } from "@/config/site";
+import { absoluteUrl, pageMetadata, schemaIds } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -27,26 +27,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const url = `${siteConfig.url}/letters/${post.slug}`;
-
-  return {
+  const metadata = pageMetadata({
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: url },
+    path: `/letters/${post.slug}`,
+    image: post.cover || undefined,
+    type: "article",
+  });
+
+  return {
+    ...metadata,
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
     openGraph: {
-      title: `${post.title} | ${siteConfig.name}`,
-      description: post.excerpt,
-      url,
+      ...metadata.openGraph,
       type: "article",
       publishedTime: post.date,
-      authors: [siteConfig.name],
-      images: post.cover ? [{ url: post.cover }] : undefined,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
-      images: post.cover ? [post.cover] : undefined,
+      authors: [siteConfig.url],
     },
   };
 }
@@ -81,13 +77,35 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
+  const url = absoluteUrl(`/letters/${post.slug}`);
+
   return (
     <main className="px-6 md:px-10 max-w-3xl mx-auto py-16 lg:py-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            url,
+            mainEntityOfPage: url,
+            image: post.cover || absoluteUrl(siteConfig.images.og),
+            datePublished: post.date,
+            wordCount: post.content.trim().split(/\s+/).length,
+            inLanguage: "en",
+            author: { "@id": schemaIds.person },
+            publisher: { "@id": schemaIds.person },
+            isPartOf: { "@id": schemaIds.website },
+          }),
+        }}
+      />
       <Link
         href="/letters"
         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12 font-ibm"
       >
-        <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+        <ChevronLeftIcon size={16} />
         all letters
       </Link>
 
@@ -169,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
           href="/letters"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
-          <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+          <ChevronLeftIcon size={16} />
           All letters
         </Link>
         <p className="text-xs text-muted-foreground font-ibm">

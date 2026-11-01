@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact",
   description:
-    "Get in touch with Francis Santander. Let's work together on your next project. Available for full-time software engineering roles and collaborations.",
+    "Get in touch with Francis Santander about your next web or mobile product. Available for projects and software engineering roles.",
+  path: "/contact",
   keywords: [
     "Contact Francis Santander",
     "Hire Full-Stack Engineer",
@@ -15,17 +17,7 @@ export const metadata: Metadata = {
     "Software Engineer Remote",
     "Software Developer Remote",
   ],
-  alternates: {
-    canonical: "https://francissantander.com/contact",
-  },
-  openGraph: {
-    title: "Contact | Francis Beam Santander",
-    description:
-      "Get in touch with Francis Santander. Let's work together on your next project. Available for full-time software engineering roles and collaborations.",
-    url: "https://francissantander.com/contact",
-    type: "website",
-  },
-};
+});
 
 export default function RootLayout({
   children,

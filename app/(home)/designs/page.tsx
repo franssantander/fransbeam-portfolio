@@ -2,11 +2,7 @@
 import UiuxData from "@/data/UIUX_DATA.json";
 import Image from "next/image";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  ArrowUpRight03Icon,
-  ArrowLeft01FreeIcons,
-} from "@hugeicons/core-free-icons";
+import { ArrowUpRightIcon, ChevronLeftIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import { CountUp } from "@/components/animations/count-up";
 import RevealLine from "@/components/animations/reveal-line";
@@ -20,23 +16,23 @@ export default function DesignsPage() {
           href="/"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
         >
-          <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+          <ChevronLeftIcon size={16} />
           Back to home
         </Link>
       </div>
 
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+        <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
           <RevealLine delay={0.1}>
-            <h1 className="text-muted-foreground">
+            <span className="block text-muted-foreground">
               <ScrambleText text="UI/UX" delay={0} />
-            </h1>
+            </span>
           </RevealLine>
-          <h1>
+          <span className="block">
             <ScrambleText text="Design" delay={0.1} />
-          </h1>
-        </div>
+          </span>
+        </h1>
         <motion.span
           className="text-muted-foreground text-sm tabular-nums mb-1"
           initial={{ opacity: 0 }}
@@ -101,8 +97,7 @@ export default function DesignsPage() {
                     <h3 className="text-white font-bold text-lg leading-tight font-geist">
                       {project.project_name}
                     </h3>
-                    <HugeiconsIcon
-                      icon={ArrowUpRight03Icon}
+                    <ArrowUpRightIcon
                       size={20}
                       className="text-white shrink-0"
                     />

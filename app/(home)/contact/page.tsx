@@ -1,23 +1,26 @@
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  ArrowLeft01FreeIcons,
-  Mail01FreeIcons,
-  Github01FreeIcons,
-  Linkedin02FreeIcons,
-  Instagram,
-  FileDownloadFreeIcons,
-  ArrowUpRight03Icon,
-} from "@hugeicons/core-free-icons";
+  ArrowUpRightIcon,
+  ChevronLeftIcon,
+  FileDownIcon,
+  MailIcon,
+} from "lucide-react";
+import {
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from "@/components/icons/brand-icons";
 import { Button } from "@/components/ui";
 import Footer from "@/components/footer";
 import { ScrambleText } from "@/components/animations/scramble-text";
-import { siteConfig } from "@/config/site";
+import { projectInquiryHref, siteConfig } from "@/config/site";
 
 const AVAILABILITY = [
+  "Product builds",
+  "Business web apps",
+  "UI/UX design",
   "Full-time roles",
-  "Freelance projects",
-  "Collaborations",
+  "Partnerships",
 ];
 
 const SOCIALS = [
@@ -25,19 +28,19 @@ const SOCIALS = [
     label: "GitHub",
     handle: "@franssantander",
     href: "https://github.com/franssantander",
-    icon: Github01FreeIcons,
+    icon: GithubIcon,
   },
   {
     label: "LinkedIn",
     handle: "francebeam",
     href: "https://www.linkedin.com/in/francebeam/",
-    icon: Linkedin02FreeIcons,
+    icon: LinkedinIcon,
   },
   {
     label: "Instagram",
     handle: "@franss.dev",
     href: "https://www.instagram.com/franss.dev/",
-    icon: Instagram,
+    icon: InstagramIcon,
   },
 ];
 
@@ -48,20 +51,20 @@ export default function ContactPage() {
         href="/"
         className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
       >
-        <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+        <ChevronLeftIcon size={16} />
         Back to home
       </Link>
 
       {/* Header */}
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
-          <h1 className="text-muted-foreground">
+        <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+          <span className="block text-muted-foreground">
             <ScrambleText text="Let's" delay={0} />
-          </h1>
-          <h1>
+          </span>
+          <span className="block">
             <ScrambleText text="Work Together" delay={0.1} />
-          </h1>
-        </div>
+          </span>
+        </h1>
       </div>
 
       {/* Content */}
@@ -78,26 +81,22 @@ export default function ContactPage() {
           <div className="hidden sm:block w-px bg-border shrink-0" />
           <div className="flex-1 flex flex-col gap-4">
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Have a project in mind or looking for a software engineer to join
-              your team? My inbox is always open — I&apos;ll get back to you
-              within 24 hours.
+              Have a product to build, a business system to modernize, or a role
+              to fill? Tell me what you&apos;re working on — I&apos;ll get back
+              to you within 24 hours.
             </p>
             <div className="flex items-center gap-4">
-              <Link
-                href={`mailto:${siteConfig.email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href={projectInquiryHref}>
                 <Button
                   className="gap-2 rounded-full px-6 hover:bg-muted-foreground"
                   size="lg"
                 >
-                  <HugeiconsIcon icon={Mail01FreeIcons} size={18} />
-                  Email Me
+                  <MailIcon size={18} />
+                  Start a project
                 </Button>
               </Link>
               <span className="text-xs text-muted-foreground">
-                santanderfrancisbeam@gmail.com
+                {siteConfig.email}
               </span>
             </div>
           </div>
@@ -110,7 +109,7 @@ export default function ContactPage() {
               Available for
             </p>
             <p className="text-sm text-muted-foreground">
-              Open to opportunities
+              Projects, roles &amp; partnerships
             </p>
           </div>
           <div className="hidden sm:block w-px bg-border shrink-0" />
@@ -153,7 +152,7 @@ export default function ContactPage() {
           </div>
           <div className="hidden sm:block w-px bg-border shrink-0" />
           <div className="flex-1 flex flex-col divide-y divide-border">
-            {SOCIALS.map(({ label, handle, href, icon }) => (
+            {SOCIALS.map(({ label, handle, href, icon: Icon }) => (
               <Link
                 key={label}
                 href={href}
@@ -161,11 +160,7 @@ export default function ContactPage() {
                 className="group flex items-center justify-between py-4 first:pt-0 last:pb-0"
               >
                 <div className="flex items-center gap-3">
-                  <HugeiconsIcon
-                    icon={icon}
-                    size={18}
-                    className="text-muted-foreground"
-                  />
+                  <Icon size={18} className="text-muted-foreground" />
                   <div>
                     <p className="text-sm font-medium group-hover:text-muted-foreground transition-colors">
                       {label}
@@ -173,8 +168,7 @@ export default function ContactPage() {
                     <p className="text-xs text-muted-foreground">{handle}</p>
                   </div>
                 </div>
-                <HugeiconsIcon
-                  icon={ArrowUpRight03Icon}
+                <ArrowUpRightIcon
                   size={16}
                   className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity"
                 />
@@ -207,7 +201,7 @@ export default function ContactPage() {
                   className="gap-2 rounded-full px-6"
                   size="lg"
                 >
-                  <HugeiconsIcon icon={FileDownloadFreeIcons} size={18} />
+                  <FileDownIcon size={18} />
                   Download Resume
                 </Button>
               </Link>

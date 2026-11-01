@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Francis Beam Santander",
   shortName: "Francis Santander",
   title: {
-    default: "Francis Santander — Software Engineer & UI/UX Designer",
+    default: "Francis Santander — Software Engineer & Founder of Medasin",
     template: "%s | Francis Santander",
   },
   email: "hello@francissantander.com",
   description:
-    "I'm Francis — a Full-Stack Software Engineer and UI/UX Designer from the Philippines. I design and build web and mobile applications.",
+    "Francis Santander is a Software Engineer and Founder of Medasin, based in the Philippines. He works with founders and businesses on full-stack product engineering and UI/UX design — web and mobile products people can rely on.",
   url: "https://francissantander.com",
   ogImage: "/og-image.png",
   locale: "en_US",
@@ -30,6 +30,12 @@ export const siteConfig = {
       "TypeScript Developer",
       "UI/UX Designer",
       "UI UX Designer Philippines",
+      "Founder",
+      "Medasin",
+      "Product Engineer",
+      "Full-Stack Product Engineering",
+      "Product Designer",
+      "Web and Mobile App Developer",
     ] as string[],
 
     verification: {
@@ -38,7 +44,7 @@ export const siteConfig = {
   },
 
   person: {
-    jobTitle: "Full-Stack Software Engineer & UI/UX Designer",
+    jobTitle: "Software Engineer & Founder",
 
     image:
       "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-img.avif",
@@ -53,11 +59,22 @@ export const siteConfig = {
     ],
   },
 
+  venture: {
+    name: "Medasin",
+    url: "https://medasin.app",
+    description:
+      "A calm productivity app built on the PARA method — one workspace that links planning, focused work, reflection, and notes.",
+    // Officially launched; planning began in March 2026
+    launchDate: "2026-10-25",
+  },
+
   socials: {
     github: "https://github.com/franssantander",
     linkedin: "https://www.linkedin.com/in/francebeam",
     instagram: "https://www.instagram.com/franss.dev",
   },
 } as const;
+
+export const projectInquiryHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("Project inquiry")}`;
 
 export type SiteConfig = typeof siteConfig;

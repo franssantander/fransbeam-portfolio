@@ -1,8 +1,7 @@
 "use client";
 import SkillsData from "@/data/SKILLS_DATA.json";
 import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowLeft01FreeIcons } from "@hugeicons/core-free-icons";
+import { ChevronLeftIcon } from "lucide-react";
 import SkillsCard from "@/components/home/skills/skills-card";
 import { groupByCategory } from "@/utils/groupByCategory";
 import { motion, Variants } from "framer-motion";
@@ -39,21 +38,21 @@ export default function SkillsPage() {
           href="/"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
         >
-          <HugeiconsIcon icon={ArrowLeft01FreeIcons} size={16} />
+          <ChevronLeftIcon size={16} />
           Back to home
         </Link>
       </div>
 
       <div className="flex items-end justify-between mb-12">
-        <div className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
-          <h1 className="text-muted-foreground">
+        <h1 className="font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[0.9] space-y-1 font-geist">
+          <span className="block text-muted-foreground">
             <ScrambleText text="Tech Stack" delay={0} />
-          </h1>
+          </span>
 
-          <h1>
+          <span className="block">
             <ScrambleText text="& Tools" delay={0.1} />
-          </h1>
-        </div>
+          </span>
+        </h1>
         <motion.span
           className="text-muted-foreground text-sm tabular-nums mb-1"
           initial={{ opacity: 0 }}
