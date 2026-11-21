@@ -33,7 +33,7 @@ export default function Hero() {
           <RevealLine delay={0.1}>
             <span className="text-muted-foreground">Software Engineer</span>
           </RevealLine>
-          <RevealLine delay={0.2}>&amp; Founder</RevealLine>
+          <RevealLine delay={0.2}>&amp; UI/UX Designer</RevealLine>
         </h2>
 
         <motion.p

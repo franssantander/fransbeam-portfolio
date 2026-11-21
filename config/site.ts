@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Francis Beam Santander",
   shortName: "Francis Santander",
   title: {
-    default: "Francis Santander — Software Engineer & Founder",
+    default: "Francis Santander — Software Engineer & UI/UX Designer",
     template: "%s | Francis Santander",
   },
   email: "hello@francissantander.com",
   description:
-    "Francis Santander is a Software Engineer and Founder of Medasin, based in the Philippines. He works with founders and businesses on full-stack product engineering and UI/UX design — web and mobile products people can rely on.",
+    "Francis Santander is a Software Engineer and UI/UX Designer based in the Philippines, and the founder of Medasin. He works with founders and businesses to design and build web and mobile products people can rely on.",
   url: "https://francissantander.com",
   ogImage: "/og-image.png",
   locale: "en_US",
@@ -44,10 +44,10 @@ export const siteConfig = {
   },
 
   person: {
-    jobTitle: "Software Engineer & Founder",
+    jobTitle: "Software Engineer & UI/UX Designer",
 
     image:
-      "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-img.avif",
+      "https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-profile.avif",
 
     alternateNames: [
       "Francis Santander",

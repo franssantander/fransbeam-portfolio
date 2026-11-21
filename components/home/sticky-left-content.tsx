@@ -49,13 +49,16 @@ const SOCIALS = [
 
 export default function StickyLeftContent() {
   return (
+    // Pinned at its starting offset (66px navbar + the page's 96px top padding),
+    // so it stays put from the first scroll; short screens fall back to 96px
+    // so the social links stay in view
     <FadeUp
       delay={0}
-      className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit"
+      className="w-full lg:w-2/5 lg:sticky lg:top-24 lg:[@media(min-height:800px)]:top-[162px] lg:self-start flex flex-col items-center lg:items-center gap-5 text-center lg:text-center h-fit"
     >
       <div className="relative h-40 w-40 lg:h-60 lg:w-60 overflow-hidden rounded-full">
         <Image
-          src="https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-img.avif"
+          src="https://vrnfzkijigqxzxt1.public.blob.vercel-storage.com/assets/images/francis-profile.avif"
           alt="Francis Santander"
           fill
           priority
@@ -69,7 +72,7 @@ export default function StickyLeftContent() {
           Francis Santander
         </h1>
         <Badge variant="secondary" className="text-sm p-3 font-geist">
-          Software Engineer &amp; Founder
+          Software Engineer &amp; UI/UX Designer
         </Badge>
         <p className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground">
           Founder of
