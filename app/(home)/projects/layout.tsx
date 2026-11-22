@@ -6,11 +6,12 @@ import { visibleProjects } from "@/lib/projects";
 export const metadata: Metadata = pageMetadata({
   title: "Featured Projects — Medasin Case Study",
   description:
-    "How Francis Santander designed, built, and launched Medasin — a calm productivity app built on the PARA method that links planning, focused work, reflection, and notes.",
+    "How Francis Santander designed and built Medasin, a second brain on the CODE and PARA methods that turns captured ideas into work you can share.",
   path: "/projects",
   keywords: [
     "Medasin",
     "Medasin Case Study",
+    "CODE Method App",
     "PARA Method App",
     "Second Brain App",
     "Productivity SaaS",

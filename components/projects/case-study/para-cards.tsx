@@ -1,19 +1,6 @@
-import {
-  type LucideIcon,
-  ArchiveIcon,
-  LibraryIcon,
-  ShapesIcon,
-  TargetIcon,
-} from "lucide-react";
+import { TargetIcon } from "lucide-react";
 import { CaseStudy } from "@/interfaces";
-
-// Maps the `icon` key in a case study's `para` entries to its Lucide icon
-const ICONS: Record<string, LucideIcon> = {
-  target: TargetIcon,
-  shapes: ShapesIcon,
-  library: LibraryIcon,
-  archive: ArchiveIcon,
-};
+import { PARA_ICONS } from "@/lib/medasin/para-icons";
 
 function WindowDots() {
   return (
@@ -30,7 +17,7 @@ export default function ParaCards({ para }: { para: CaseStudy["para"] }) {
   return (
     <div className="grid sm:grid-cols-2 gap-4">
       {para.map(({ name, icon, summary, examples }) => {
-        const Icon = ICONS[icon] ?? TargetIcon;
+        const Icon = PARA_ICONS[icon] ?? TargetIcon;
         return (
           <div
             key={name}

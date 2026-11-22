@@ -4,22 +4,24 @@ import {
   type LucideIcon,
   ArrowUpRightIcon,
   CalendarCheckIcon,
-  FolderKanbanIcon,
+  CircleCheckIcon,
   LockKeyholeIcon,
-  WorkflowIcon,
+  Share2Icon,
+  SquarePlusIcon,
 } from "lucide-react";
 import { FadeUp } from "@/components/animations/fade-up";
-import MedasinVisual from "@/components/home/projects/medasin/medasin-visual";
+import CodeDiagram from "@/components/home/projects/medasin/code-diagram";
 import { Button } from "@/components/ui";
 import { Project } from "@/interfaces";
+import BuildSteps from "./build-steps";
 import CaseStudySidebar from "./case-study-sidebar";
+import CodeRings from "./code-rings";
 import FlowStrip from "./flow-strip";
-import ParaCards from "./para-cards";
 
 // Maps the `icon` key in a case study's `features` to its Lucide icon
 const FEATURE_ICONS: Record<string, LucideIcon> = {
-  workspace: FolderKanbanIcon,
-  workflow: WorkflowIcon,
+  capture: SquarePlusIcon,
+  share: Share2Icon,
   plans: CalendarCheckIcon,
   vault: LockKeyholeIcon,
 };
@@ -59,27 +61,30 @@ export default function CaseStudy({ project }: { project: Project }) {
     <article>
       {/* Visual */}
       <FadeUp delay={0.2}>
-        <Link
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative block overflow-hidden rounded-xl border border-border bg-muted"
-        >
+        <div className="relative overflow-hidden rounded-xl border border-border bg-muted">
           {project.visual === "medasin-brain" && (
-            <div className="sm:py-6">
-              <MedasinVisual
-                eyebrow={project.tagline}
-                headline={project.headline}
-              />
-            </div>
+            <CodeDiagram
+              eyebrow={project.tagline}
+              headline={project.headline}
+              steps={study.code.steps}
+              places={study.para}
+            />
           )}
-        </Link>
+          {/* Over the visual rather than round it, so the steps stay a list to screen readers */}
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${domain}`}
+            className="absolute inset-0 z-10 rounded-xl focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-foreground"
+          />
+        </div>
       </FadeUp>
 
       <div className="grid lg:grid-cols-[17rem_1fr] gap-12 lg:gap-20 mt-16">
         <CaseStudySidebar project={project} />
 
-        <div className="flex flex-col gap-16 max-w-3xl">
+        <div className="flex min-w-0 flex-col gap-16 max-w-3xl">
           {/* Intro */}
           <FadeUp inView>
             <div className="space-y-4">
@@ -98,20 +103,43 @@ export default function CaseStudy({ project }: { project: Project }) {
             </p>
           </Chapter>
 
-          <Chapter index="02" title="What I built">
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              {study.built}
+          <Chapter index="02" title="How it works">
+            <p className="font-spectral text-2xl font-bold tracking-tight text-balance md:text-3xl">
+              {study.code.heading}
             </p>
-            <ParaCards para={study.para} />
-            <div className="pt-4">
+            <CodeRings steps={study.code.steps} />
+            <div className="space-y-2 pt-2 text-center">
+              <p className="text-base text-muted-foreground">
+                <strong className="font-geist font-black text-foreground">
+                  CODE
+                </strong>{" "}
+                {study.code.closing}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {study.code.credit}
+              </p>
+            </div>
+          </Chapter>
+
+          <Chapter index="03" title="What I built">
+            <BuildSteps steps={study.code.steps} para={study.para} />
+            <div className="space-y-4 pt-4">
+              <div className="space-y-2">
+                <h4 className="font-geist text-lg font-semibold">
+                  Everything links
+                </h4>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  {study.links}
+                </p>
+              </div>
               <FlowStrip flow={study.flow} />
             </div>
           </Chapter>
 
-          <Chapter index="03" title="Key features">
+          <Chapter index="04" title="Key features">
             <div className="grid sm:grid-cols-2 gap-4">
               {study.features.map(({ icon, title, body }) => {
-                const Icon = FEATURE_ICONS[icon] ?? FolderKanbanIcon;
+                const Icon = FEATURE_ICONS[icon] ?? CircleCheckIcon;
                 return (
                   <div
                     key={title}

@@ -15,9 +15,9 @@ export default function HomePage() {
   return (
     <div className="px-6 md:px-10 max-w-7xl mx-auto">
       <SectionRail />
-      <div className="flex flex-col lg:flex-row w-full items-start gap-16 py-16 lg:py-24">
+      <div className="flex flex-col lg:flex-row w-full items-start gap-16 py-16 lg:pt-[30px] lg:pb-0">
         <StickyLeftContent />
-        <div className="flex flex-col space-y-24 w-full lg:w-3/5">
+        <div className="flex flex-col space-y-24 w-full lg:w-3/5 lg:pb-24">
           <div id="hero" className="scroll-mt-24">
             <FadeUp inView delay={0.1}>
               <Hero />

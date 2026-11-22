@@ -1,7 +1,29 @@
+export interface CodeStep {
+  name: string;
+  tagline: string;
+  /** Collect or create: picks the step's marker colour */
+  group: string;
+  /** The line beside the brain; a step with a `system` lists its places instead */
+  summary?: string;
+  system?: string;
+  built: string;
+  /** Which side of the brain the step's label sits on */
+  side: string;
+  /** Its point on the brain, as shares of the brain's box */
+  target: { x: number; y: number };
+}
+
 export interface CaseStudy {
   problem: string;
-  built: string;
-  para: { name: string; icon: string; summary: string; examples: string[] }[];
+  code: { heading: string; closing: string; credit: string; steps: CodeStep[] };
+  para: {
+    name: string;
+    icon: string;
+    purpose: string;
+    summary: string;
+    examples: string[];
+  }[];
+  links: string;
   flow: { label: string; value: string }[];
   features: { icon: string; title: string; body: string }[];
 }

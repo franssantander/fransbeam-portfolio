@@ -44,6 +44,15 @@ const spectral = Spectral({
   weight: ["700"],
 });
 
+// The italic of Medasin's CODE taglines, which only the case study uses
+const spectralItalic = Spectral({
+  variable: "--font-spectral-italic-face",
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  preload: false,
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
@@ -201,7 +210,7 @@ export default function RootLayout({
           />
         </head>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} ${interSans.variable} ${ibmPlexMono.variable} ${spectral.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} ${interSans.variable} ${ibmPlexMono.variable} ${spectral.variable} ${spectralItalic.variable} antialiased`}
         >
           <ThemeProvider
             attribute="class"

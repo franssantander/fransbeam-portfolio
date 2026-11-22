@@ -63,7 +63,7 @@ export const siteConfig = {
     name: "Medasin",
     url: "https://medasin.app",
     description:
-      "A calm productivity app built on the PARA method — one workspace that links planning, focused work, reflection, and notes.",
+      "Medasin is a calm second brain built on the CODE method: capture ideas, organize them with PARA, distill what matters, and express it as work you can share.",
     // Officially launched; planning began in March 2026
     launchDate: "2026-10-25",
   },

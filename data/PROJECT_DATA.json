@@ -5,14 +5,14 @@
     "category": "SaaS · Productivity",
     "status": "Live",
     "role": "Founder · Product · Design · Engineering",
-    "tagline": "A connected system for a thoughtful life.",
-    "headline": "The PARA method for your second brain.",
-    "lede": "Sort your life into Projects, Areas, and Resources. Then plan the work on a board, do it in a focus session, and write down how it went. Everything stays linked.",
+    "tagline": "Second Brain",
+    "headline": "A connected system for a thoughtful life.",
+    "lede": "Medasin is a calm second brain built on the CODE method: capture ideas, organize them with PARA, distill what matters, and express it as work you can share.",
     "visual": "medasin-brain",
-    "description": "Ideas, tasks, and files scatter across too many apps. Medasin brings them into one workspace built on the PARA method — Projects, Areas, Resources, and Archives — so planning, focused work, reflection, and notes stay linked.",
+    "description": "Medasin is a calm second brain built on the CODE method: capture ideas, organize them with PARA, distill what matters, and express it as work you can share.",
     "highlights": [
-      "PARA workspace — every project, note, and file in one place",
-      "Linked workflow: board task → focus session → journal entry",
+      "Quick capture: save a thought from any page with Ctrl+Shift+K",
+      "Share your work: ship to Plans, Letters, a private link, or Ideas",
       "Habits, plans, and reminders alongside the work itself",
       "Encrypted Vault for sensitive records, encrypted on-device"
     ],
@@ -24,12 +24,55 @@
       { "icon": "php", "name": "PHP", "hasVariant": true }
     ],
     "case_study": {
-      "problem": "Ideas, tasks, and files scatter across too many apps. Plans live in one tool, notes in another, and what actually got done rarely gets written down — so nothing connects, and it's hard to know where anything lives.",
-      "built": "Medasin is one workspace built on the PARA method. Every project, note, and file has one home, and the work itself stays linked: pull a board task into a focus session, and your reflection becomes a journal entry — nothing copied by hand.",
+      "problem": "Saving an idea is easy. Using it is the hard part. Notes, links, and files pile up across too many apps, and rarely come back when there's work to do. So what you collect never becomes what you create.",
+      "code": {
+        "heading": "From collecting to creating",
+        "closing": "gives it a path.",
+        "credit": "Built on CODE and PARA, methods by Tiago Forte.",
+        "steps": [
+          {
+            "name": "Capture",
+            "tagline": "Keep what resonates",
+            "group": "collect",
+            "summary": "Collect the ideas, notes, articles and links you find useful.",
+            "built": "An inbox for notes, links, media, and files. Type, paste, or drop anything, and sort it later.",
+            "side": "left",
+            "target": { "x": 0.15, "y": 0.33 }
+          },
+          {
+            "name": "Organize",
+            "tagline": "Save for actionability",
+            "group": "collect",
+            "system": "PARA",
+            "built": "Turn a capture into what it's for and file it where it will be used. PARA gives every project, note, and file one home.",
+            "side": "right",
+            "target": { "x": 0.64, "y": 0.2 }
+          },
+          {
+            "name": "Distill",
+            "tagline": "Find the essence",
+            "group": "create",
+            "summary": "Summarize, highlight key passages, and pull out the best ideas.",
+            "built": "Four layers: the raw note, bold, highlight, and an optional summary. The best parts become packets you can reuse.",
+            "side": "right",
+            "target": { "x": 0.86, "y": 0.42 }
+          },
+          {
+            "name": "Express",
+            "tagline": "Show your work",
+            "group": "create",
+            "summary": "Turn what you know into projects, writing, decisions and creative work.",
+            "built": "A guided path from project to finished work: gather your packets, make it yours, then ship it and feed back what you learned.",
+            "side": "left",
+            "target": { "x": 0.3, "y": 0.56 }
+          }
+        ]
+      },
       "para": [
         {
           "name": "Projects",
           "icon": "target",
+          "purpose": "Goals with an outcome",
           "summary": "Work with a finish line.",
           "examples": [
             "Spring newsletter",
@@ -39,19 +82,22 @@
         },
         {
           "name": "Areas",
-          "icon": "shapes",
+          "icon": "areas",
+          "purpose": "Ongoing responsibilities",
           "summary": "Parts of life you keep up.",
           "examples": ["Health and fitness", "Writing", "Home and family"]
         },
         {
           "name": "Resources",
           "icon": "library",
+          "purpose": "Topics of interest",
           "summary": "Things worth keeping.",
           "examples": ["Book highlights", "Recipe PDFs", "Design references"]
         },
         {
           "name": "Archives",
           "icon": "archive",
+          "purpose": "Inactive projects and notes",
           "summary": "Done, but not gone.",
           "examples": [
             "Winter newsletter",
@@ -60,6 +106,7 @@
           ]
         }
       ],
+      "links": "Pull a board task into your focus list, work on it, and your reflection becomes a journal entry. You never copy anything by hand.",
       "flow": [
         {
           "label": "Board task",
@@ -80,14 +127,14 @@
       ],
       "features": [
         {
-          "icon": "workspace",
-          "title": "PARA workspace",
-          "body": "Every project, note, and file in one place."
+          "icon": "capture",
+          "title": "Quick capture",
+          "body": "Save a thought from any page with Ctrl+Shift+K."
         },
         {
-          "icon": "workflow",
-          "title": "Linked workflow",
-          "body": "Board task → focus session → journal entry."
+          "icon": "share",
+          "title": "Share your work",
+          "body": "Ship to Plans, Letters, a private link, or Ideas."
         },
         {
           "icon": "plans",

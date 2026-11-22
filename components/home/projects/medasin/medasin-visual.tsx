@@ -18,7 +18,7 @@ export default function MedasinVisual({
       <div className="relative flex flex-col items-center px-6 py-10 text-center sm:py-12">
         <BrainCanvas className="w-48 sm:w-60 lg:w-64" />
         {eyebrow && (
-          <p className="mt-6 text-xs text-muted-foreground sm:text-sm">
+          <p className="mt-6 text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase">
             {eyebrow}
           </p>
         )}
